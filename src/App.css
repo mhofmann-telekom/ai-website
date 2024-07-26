@@ -1,0 +1,144 @@
+
+.introduction-wrapper {
+    padding: 0 5rem 0 calc(260px + 10rem);
+    display: flex;
+    align-items: start;
+    height: 100vh;
+    /* background: rgb(1,0,92);
+    background: linear-gradient(90deg, rgba(1,0,92,1) 0%, rgba(2,0,36,1) 25%, rgba(0,0,0,1) 100%); */
+
+    /* background: rgb(1,0,92);
+    background: radial-gradient(circle, rgba(1,0,92,1) 0%, rgba(2,0,36,1) 76%, rgba(0,0,0,1) 100%); */
+    background-color: var(--dark-100);
+}
+
+.canvas-container {
+    flex: 1;
+    height: 100%;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.text-content {
+    font-size: 1.5em;
+}
+
+#sidebar{
+    width: 260px;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem;
+    background-color: var(--dark-300);
+    font-size: 20px;
+    font-family: "TeleNeo Bold";
+    color: white;
+}
+
+#logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    width: 100%;
+}
+
+#logo-wrapper > img{
+    height: 100%;
+}
+
+#logo-wrapper > span{
+    font-size: 19px;
+}
+
+#nav-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.nav-item{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "TeleNeo Regular";
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+#sidebar .info-text{
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--dark-700);
+    margin-top: 2rem;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: #E20074;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#title{
+    font-size: 4rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+#description-wrapper{
+    font-size: 1.3rem;
+    color: lightblue;
+    font-family: "TeleNeo Regular";
+}
+
+#chip-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    gap: 0 1rem;
+}
+
+#chip-wrapper > p{
+    padding: .5rem .8rem;
+    border-radius: 500px;
+    border: 1px solid grey;
+    font-size: 1.1rem;
+    font-family: "TeleNeo Regular";
+    transition: background-color 300ms;
+}
+
+#chip-wrapper > p:hover{
+    background-color: #2062C2;
+    border-color: transparent;
+}
