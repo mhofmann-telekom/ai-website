@@ -12,7 +12,12 @@ function Tube({ curve }) {
     })
   
     const BrainMaterial = shaderMaterial(
-      { time: 0, color: new THREE.Color(0.1, 0.3, 0.6)},
+      { time: 0, color: new THREE.Color(0.1, 0.3, 0.6)}, // blue
+      // { time: 0, color: new THREE.Color(0.886, 0.0, 0.455) }, magenta
+      // { time: 0, color: new THREE.Color(0.886, 0.002, 0.37) },
+      // { time: 0, color: new THREE.Color(0.956, 0.0, 0.455) },
+
+
       // vertex shader
       // glsl
       `
@@ -37,7 +42,7 @@ function Tube({ curve }) {
         void main() {
           // vec3 color1 = vec3(1.,0.,0.);
           // vec3 color2 = vec3(1.,1.,0.);
-          vec3 finalColor = mix(color, color*0.25, vProgress);
+          vec3 finalColor = mix(color, color*0.3, vProgress);
           float hideCorners = smoothstep(1., 0.9, vUv.x);
           float hideCornersOpposite = smoothstep(0.,0.1,vUv.x);
           // gl_FragColor.rgba = vec4(finalColor,1.);
