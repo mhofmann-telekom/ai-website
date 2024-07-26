@@ -11,7 +11,12 @@
   --dark-600: #505052;
   --dark-700: #868688;
   --dark-800: #bcbcbe;
+  --dark-850: #e4e4e4;
   --dark-900: #f2f2f3;
+  --dark-950: #FFFFFF;
+
+  --magenta: #e20074;
+  --blue: #53BAF2;
 }
 
 @font-face {
