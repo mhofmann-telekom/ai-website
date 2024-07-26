@@ -1,6 +1,5 @@
 
 #sidebar{
-    width: 350px;
     height: 100dvh;
     position: fixed;
     top: 0;
@@ -19,8 +18,8 @@
 #logo-wrapper{
     display: flex;
     align-items: center;
-    gap: 15px;
-    height: 30px;
+    gap: 10px;
+    height: 25px;
     width: 100%;
 }
 
@@ -29,31 +28,30 @@
 }
 
 #logo-wrapper > span{
-    font-size: 25px;
-    transform: translateY(1px);
+    font-size: 24px;
 }
 
 #sidebar .info-text{
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12px;
     color: var(--dark-900);
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 #nav-item-wrapper{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
 }
 
 .nav-item{
     cursor: pointer;
     position: relative;
-    height: 50px;
+    height: 40px;
     width: 100%;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "TeleNeo Regular";
     padding: 5px;
     display: flex;

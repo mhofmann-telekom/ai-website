@@ -8,6 +8,7 @@ import Tubes from '../components/Tubes/Tubes';
 import Particles from '../components/Particles/Particles';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Slider from "../components/Slider/Slider"
+import arrow from "./../assets/icons/arrow-right.svg";
 import './App.css';
 
 const PATHS = data.economics[0].paths;
@@ -64,16 +65,44 @@ function App() {
             <p className="chip">sentiment analysis</p>
             <p className="chip">video analytics</p>
           </div>
+          <div id="box-wrapper">
+            <div className="box">
+              <p>14+</p>
+              <p>Partners</p>
+            </div>
+            <div className="box">
+              <p>55+</p>
+              <p>Projects</p>
+            </div>
+            <div className="box">
+              <p>89+</p>
+              <p>Happy clients</p>
+            </div>
+            <div className="box">
+              <p>273+</p>
+              <p>Meetings</p>
+            </div>
+          </div>
+          <div className="button-wrapper">
+            <button className="secondary-button">
+              <span>See our use cases</span>
+            </button>
+            <span>or</span>
+            <button className="primary-button-icon primary-button">
+              <span>Reach out to us</span>
+              <img src={arrow}/>
+            </button>
+          </div>
         </div>
         <div className="shape-wrapper">
-          <svg id="shape" viewBox="0 0 620 622" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="100%" height="100%" rx="29" fill="var(--dark-300)" />
+          <svg id="shape" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="200%" height="100%" rx="29" fill="var(--dark-300)" />
           </svg>
           <div className="canvas-container">
             <Canvas
               style={{ width: "100%", height: "100%" }}
               pixelratio={window.devicePixelRatio}
-              camera={{ position: [0, 0, 0.28] }}
+              camera={{ position: [0, 0, 0.4] }}
             >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} intensity={1} />
@@ -84,7 +113,11 @@ function App() {
           </div>
         </div>
       </div>
-      <Slider></Slider>
+      <div id="clientWrapper">
+        <h2 className="headline-h2">Our clients & partners:</h2>
+        <p className="headline-subtext">We proudly showcase the diverse organizations and individuals we have had the privilege of partnering with.</p>
+        <Slider></Slider>
+      </div>
     </>
   );
 }
