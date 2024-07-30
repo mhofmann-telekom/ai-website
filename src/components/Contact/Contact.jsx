@@ -5,7 +5,7 @@ export default function Contact(){
     return (
         <div id="contact">
         <h2 className="headline-h2">Location & Contact:</h2>
-        <p className="headline-subtext">Visit our office and get in touch with us for any inquiries or support. Our location is easy to reach, and our team is ready to assist you. We look forward to connecting with you!</p>
+        <p className="headline-subtext margin-y-2rem">Visit our office and get in touch with us for any inquiries or support. Our location is easy to reach, and our team is ready to assist you. We look forward to connecting with you!</p>
         <div id="contact-options-wrapper">
           <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.731571335806!2d103.96593511064954!3d1.3373206616101367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17ed1088fda1%3A0xb246460edac107b6!2sT-Systems%20Singapore!5e0!3m2!1sde!2ssg!4v1722232258201!5m2!1sde!2ssg" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           <div id="contact-details">
@@ -24,7 +24,7 @@ export default function Contact(){
               <img style={{height: "20px", width: "20px"}} src={share}/>
               <h3 className="single-details-title">Or connect to us via:</h3>
               <a href="https://www.t-systems.com/sg/en" target="_blank" className="social-media-contact-option margin-top-auto">
-                <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#clip0_17_74)">
                     <path d="M23.9996 19.6363V28.9309H36.916C36.3488 31.9199 34.6468 34.4509 32.0941 36.1527L39.8831 42.1964C44.4213 38.0075 47.0395 31.8547 47.0395 24.5456C47.0395 22.8438 46.8868 21.2073 46.6031 19.6366L23.9996 19.6363Z" fill="white"/>
                     <path d="M10.5494 28.5681L8.79263 29.9128L2.57434 34.7564C6.52342 42.589 14.6174 48 23.9991 48C30.4789 48 35.9116 45.8618 39.8826 42.1965L32.0936 36.1528C29.9554 37.5928 27.2281 38.4656 23.9991 38.4656C17.7591 38.4656 12.4575 34.2547 10.5592 28.5819L10.5494 28.5681Z" fill="white"/>

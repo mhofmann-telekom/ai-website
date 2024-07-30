@@ -42,6 +42,10 @@
     font-family: "TeleNeo Regular";
 }
 
+.margin-y-2rem{
+    margin: 2rem 0;
+}
+
 #description-wrapper{
     font-size: 1.3rem;
     color: lightblue;
@@ -187,6 +191,11 @@
     border-color: black;
 }
 
+
+#expertise-wrapper{
+    padding: 3rem 5rem 5rem calc(260px + 5rem);
+}
+
 #footer{
     padding: 0 5rem 2rem calc(260px + 5rem);
     background-color: var(--dark-300);
@@ -195,7 +204,6 @@
     align-items: center;
     font-size: 14px;
 }
-
 
 
 @media (max-height: 650px) {

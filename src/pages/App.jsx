@@ -11,6 +11,7 @@ import Slider from "../components/Slider/Slider"
 import arrow from "./../assets/icons/arrow-right.svg";
 import Contact from '../components/Contact/Contact';
 import './App.css';
+import Expertise from '../components/Expertise/Expertise';
 
 const PATHS = data.economics[0].paths;
 const brainCurves = [];
@@ -120,9 +121,10 @@ function App() {
       </div>
       <div id="client-wrapper">
         <h2 className="headline-h2">Our clients & partners:</h2>
-        <p className="headline-subtext">We proudly showcase the diverse organizations and individuals we have had the privilege of partnering with.</p>
+        <p className="headline-subtext margin-y-2rem">We proudly showcase the diverse organizations and individuals we have had the privilege of partnering with.</p>
         <Slider></Slider>
       </div>
+      <Expertise></Expertise>
       <Contact></Contact>
       <div id="footer">
         <span>T-Systems © {new Date().getFullYear().toString()} - All Rights Reserved.</span>
