@@ -3,7 +3,7 @@
     padding: 0 0 0 260px;
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
-    height: 100vh;
+    height: minmax(100vh, fit-content);
     width: 100%;
     background-color: var(--dark-950);
     overflow: hidden;
@@ -16,7 +16,7 @@
     width: 100%;
     text-wrap: wrap;
     row-gap: 2rem;
-    padding: 5rem 0 0 5rem;
+    padding: 5rem 0 5rem 5rem;
 }
 
 .headline-h1{
@@ -97,7 +97,7 @@
 }
 
 
-#clientWrapper{
+#client-wrapper{
     padding: 0 5rem 0 calc(260px + 5rem);
 }
 
@@ -122,6 +122,7 @@
 
 .box>p{
     margin: 0;
+    text-align: center;
 }
 
 .box>p:first-child{
@@ -137,6 +138,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 2rem;
 }
 
 .primary-button, .secondary-button{
@@ -177,9 +179,130 @@
 */
 
 .secondary-button{
+    color: black;
     background-color: white;
     border: 1px solid var(--dark-800);
 }
 .secondary-button:hover{
     border-color: black;
+}
+
+#contact{
+    padding: 5rem 5rem 5rem calc(260px + 5rem);
+    background-color: var(--dark-300);
+    color: white;
+}
+
+#contact > .headline-subtext{
+    color: var(--dark-850);
+}
+
+#contact-options-wrapper{
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+#contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 1fr;
+}
+
+#maps{
+    border-radius: 10px;
+    width: 50%;
+    aspect-ratio: 3/2;
+}
+
+.single-details{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--dark-600);
+    background-color: var(--dark-500);
+    gap: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.single-details > p{
+    margin: 0;
+    font-family: "TeleNeo Medium";
+    font-size: .9rem;
+    line-height: 150%;
+}
+
+.single-details > p:nth-child(4){
+    color: var(--dark-700);
+}
+
+.single-details:nth-child(3){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+}
+
+.single-details-title{
+    margin: 0;
+}
+
+.social-media-contact-option{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: fit-content;
+    width: 100%;
+    cursor: pointer;
+    /* border-bottom: 1px solid var(--dark-600); */
+    padding: .5rem 0;
+}
+
+.social-media-contact-option > p{
+    margin: 0;
+    font-size: .9rem;
+}
+
+.social-media-contact-option > p:nth-child(3){
+    margin-left: auto;
+    color: var(--dark-700);
+}
+
+.social-media-contact-option > p:nth-child(2){
+    font-family: "TeleNeo Medium";
+}
+
+.social-media-contact-option:hover > p:nth-child(2){
+    text-decoration: underline;
+}
+
+.margin-top-auto{
+    margin-top: auto;
+}
+
+.margin-bottom-auto{
+    margin-bottom: auto;
+}
+
+#footer{
+    padding: 0 5rem 2rem calc(260px + 5rem);
+    background-color: var(--dark-300);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+@media (max-height: 650px) {
+    .canvas-container{
+        transform: translateY(-15%);
+    }
 }
