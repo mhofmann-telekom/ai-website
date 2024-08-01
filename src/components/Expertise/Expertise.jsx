@@ -3,8 +3,34 @@ import "./Expertise.css";
 import PlugIcon from "../../assets/icons/Plug-Icon";
 import BatteryIcon from "../../assets/icons/Battery-Icon";
 import DataIcon from "../../assets/icons/Data-Icon";
+import React, { useEffect } from 'react';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger) 
 
 export default function Expertise(){
+
+  useEffect(() => {
+    const cards = document.querySelectorAll(".card");
+    
+    cards.forEach((card, index) => {
+      gsap.fromTo(card, 
+        { opacity: 0 }, 
+        { 
+          opacity: 1, 
+          duration: 2, 
+          delay: index * .3,
+          scrollTrigger: {
+            trigger: card,
+            start: 'bottom bottom',
+            end: '+=500px',
+          }
+        }
+      );
+    });
+  }, []);
+
   return (
     <div id="expertise-wrapper">
       <h2 className="headline-h2">Our expertise:</h2>
@@ -33,7 +59,7 @@ export default function Expertise(){
         </div>
         <div className="card">
           <DataIcon strokeColor="var(--dark-200)"></DataIcon>
-          <h3>Data</h3>
+          <h3>Analytics</h3>
           <p>
             We use advanced tools such as Microsoft Azure Data Factory and Power BI to transform and visualize complex data sets. Our expertise covers the entire data pipeline - from raw data preparation to detailed analysis - to enable you to make informed decisions.
           </p>
