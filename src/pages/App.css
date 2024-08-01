@@ -15,7 +15,7 @@
     width: 100%;
     text-wrap: wrap;
     row-gap: 2rem;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .headline-h1{
@@ -90,7 +90,7 @@
     fill: var(--dark-300);
 }
 
-.canvas-container{
+.introduction-wrapper .canvas-container{
     position: absolute;
     right: 0;
     top: 0;
@@ -133,6 +133,7 @@
 
 .button-wrapper{
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     margin-top: 2rem;
@@ -155,6 +156,7 @@
     line-height: 1.5rem;
     margin: 0;
     transition: all 0.3ms;
+    min-width: max-content;
 }
 
 .primary-button-icon{
@@ -202,8 +204,30 @@
     color: var(--dark-850);
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
+
+#healthcare{
+    display: flex;
+    gap: 5rem;
+}
+#healthcare .canvas-container{
+    width: 30%;
+}
+#healthcare-content{
+    width: 70%;
+}
+
+#healthcare .use-case-image{
+    width: 50%;
+    aspect-ratio: 2/1;
+    filter: invert(.92);
+}
+
+
 #footer{
-    padding: 0 5rem 2rem calc(260px + 5rem);
+    padding: 1rem;
     background-color: var(--dark-300);
     color: white;
     display: flex;
@@ -213,14 +237,15 @@
 
 
 @media (max-height: 650px) {
-    .canvas-container{
+    .introduction-wrapper .canvas-container{
         transform: translateY(-15%);
     }
 }
 
-
-@media only screen and (min-width: 640px){
-
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .headline-wrapper{
+        padding: 3rem 0 3rem 3rem;
+    }
     #expertise-wrapper{
         padding: 2rem 3rem 2rem 3rem;
     }
@@ -228,13 +253,19 @@
     #client-wrapper{
         padding: 2rem 3rem 2rem 3rem;
     }
+    .button-wrapper{
+        flex-direction: row;
+    }
 }
 
-@media only screen and (min-width: 768px){
-
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Add specific styles if needed */
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    #footer{
+        padding: 0 5rem 2rem calc(260px + 5rem);
+    }
     .introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
     }
@@ -252,9 +283,9 @@
     }
 }
 
-@media only screen and (min-width: 1280px){
-    #sidebar{
-        display: block;
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+    #footer{
+        padding: 0 5rem 2rem calc(260px + 5rem);
     }
     .introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
@@ -273,9 +304,9 @@
     }
 }
 
-@media only screen and (min-width: 1536px){
-    #sidebar{
-        display: block;
+@media only screen and (min-width: 1536px) {
+    #footer{
+        padding: 0 5rem 2rem calc(260px + 5rem);
     }
     .introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;

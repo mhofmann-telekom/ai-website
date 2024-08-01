@@ -98,18 +98,18 @@
 
 @media only screen and (min-width: 1024px){
     #sidebar{
-        display: block;
+        display: flex;
     }
 }
 
 @media only screen and (min-width: 1280px){
     #sidebar{
-        display: block;
+        display: flex;
     }
 }
 
 @media only screen and (min-width: 1536px){
     #sidebar{
-        display: block;
+        display: flex;
     }
 }

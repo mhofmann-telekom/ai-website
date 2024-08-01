@@ -8,15 +8,17 @@
 
 .card{
     background-color: var(--dark-900);
+    border: 1px solid var(--dark-800);
     padding: 1rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
-    width: 25%;
-    min-width: 300px;
+    /* width: 25%; */
+    /* min-width: 300px; */
+    width: 300px;
     aspect-ratio: 1/1;
-    /* box-shadow: .1rem .5rem 2rem rgb(223, 223, 226); */
+    /* box-shadow: .1rem .5rem 2rem ; */
 }
 
 .card h3{
@@ -41,10 +43,14 @@ xl: 1280px (Extra large devices like desktops)
 
 @media only screen and (min-width: 640px){
 
+
 }
 
 @media only screen and (min-width: 768px){
-    
+    #card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -57,10 +63,11 @@ xl: 1280px (Extra large devices like desktops)
 @media only screen and (min-width: 1280px){
     #card-wrapper{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
-@media only screen and (min-width: 1536px){
+@media only screen and (min-width: 1680px){
     #card-wrapper{
         flex-direction: row;
         flex-wrap: nowrap;

@@ -19,11 +19,11 @@ export default function Expertise(){
         { opacity: 0 }, 
         { 
           opacity: 1, 
-          duration: 2, 
-          delay: index * .3,
+          duration: 1, 
+          delay: index * .6,
           scrollTrigger: {
-            trigger: card,
-            start: 'bottom bottom',
+            trigger: "#card-wrapper",
+            start: 'top bottom',
             end: '+=500px',
           }
         }

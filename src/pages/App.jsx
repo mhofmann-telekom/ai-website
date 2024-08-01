@@ -3,16 +3,19 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { data } from '../utils/data';
 import * as THREE from 'three';
+import gsap from 'gsap';
+
+import './App.css';
 
 import Tubes from '../components/Tubes/Tubes';
 import Particles from '../components/Particles/Particles';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Slider from "../components/Slider/Slider"
-import arrow from "./../assets/icons/arrow-right.svg";
+import Arrow from "./../assets/icons/arrow-right.svg";
 import Contact from '../components/Contact/Contact';
-import './App.css';
 import Expertise from '../components/Expertise/Expertise';
-import gsap from 'gsap';
+
+import DentaScan from '../assets/img/DentaScan.png';
 
 const PATHS = data.economics[0].paths;
 const brainCurves = [];
@@ -81,7 +84,7 @@ function App() {
         <div className="headline-wrapper">
           <h1 className="headline-h1">Let's power higher performance...</h1>
           <p className="headline-text">through the use of artificial intelligence.</p>
-          <p className="headline-subtext" ref={subtextRef}>Our AI team specializes in large language models, automating email sorting, enhancing enterprise search, and forecasting demand. We develop advanced AI solutions using cutting-edge techniques:</p>
+          <p className="headline-subtext" ref={subtextRef}>Our AI team specializes in large language models, automating email sorting, enhancing enterprise search, and forecasting demand utilizing cutting-edge technologies:</p>
           <div id="chip-wrapper">
             <p className="chip">generative AI</p>
             <p className="chip">computer vision</p>
@@ -113,7 +116,7 @@ function App() {
             <span>or</span>
             <a href="#contact" className="primary-button-icon primary-button">
               <span>Reach out to us</span>
-              <img src={arrow}/>
+              <img src={Arrow}/>
             </a>
           </div>
         </div>
@@ -151,19 +154,33 @@ function App() {
           <p className="headline-subtext margin-y-2rem">In this section, we introduce you our use cases for artificial intelligence in healthcare, insurance and manufacturing.</p>
         </div>
         <div id="healthcare">
-          {/* <h3 className="headline-h3"></h3> */}
+          <div className="canvas-container">
+            <Canvas
+              style={{ width: "100%", height: "100%"}}
+              pixelratio={window.devicePixelRatio}
+              camera={{ position: [0, 0, 0.4] }}
+            >
+              <ambientLight intensity={0.5} />
+              <pointLight position={[10, 10, 10]} intensity={1} />
+              <Tubes curves={biologyCurves} />
+              <Particles curves={biologyCurves} />
+              <OrbitControls enableZoom={false} />
+            </Canvas>
+          </div>
+          <div id="healthcare-content">
+            <h3 className="headline-h3 uppercase">DentaScan</h3>
+            <img className="use-case-image" src={DentaScan}/>
+            <p>
+              DentaScan is an advanced software tool designed for precise segmentation of dental structures in 
+              DICOM (Digital Imaging and Communications in Medicine) scans. Leveraging the power of MONAI (Medical Open Network for AI), 
+              this software offers cutting-edge image segmentation capabilities tailored specifically for dental imaging data. 
+              By utilizing state-of-the-art algorithms and machine learning techniques, DentaScan accurately identifies and delineates different dental structures such as teeth, roots, and surrounding tissues from DICOM scans. 
+              This enables dental professionals to perform detailed analysis, treatment planning, and diagnosis with enhanced precision and efficiency. 
+              DentaScan streamlines the workflow for dental practitioners, facilitating better patient care and treatment outcomes.
+            </p>
+          </div>
         </div>
-        <Canvas
-          style={{ width: "100%", height: "100%", display: "grid", placeItems: "center" }}
-          pixelratio={window.devicePixelRatio}
-          camera={{ position: [0, 0, 0.4] }}
-        >
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={1} />
-          <Tubes curves={biologyCurves} />
-          <Particles curves={biologyCurves} />
-          <OrbitControls enableZoom={false} />
-        </Canvas>
+        
       </div>
       {/* <div style={{backgroundColor:"black", height: "100dvh"}}>
         <Canvas
