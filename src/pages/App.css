@@ -1,6 +1,5 @@
 
 .introduction-wrapper {
-    padding: 0 0 0 260px;
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
     height: minmax(100vh, fit-content);
@@ -16,18 +15,16 @@
     width: 100%;
     text-wrap: wrap;
     row-gap: 2rem;
-    padding: 5rem 0 5rem 5rem;
+    padding: 3rem;
 }
 
 .headline-h1{
     font-size: 2.6rem;
-    margin: 0;
 }
 
 .headline-h2{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    margin: 0;
 }
 
 .headline-text{
@@ -90,6 +87,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    fill: var(--dark-300);
 }
 
 .canvas-container{
@@ -98,11 +96,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-}
-
-
-#client-wrapper{
-    padding: 0 5rem 0 calc(260px + 5rem);
 }
 
 #box-wrapper{
@@ -124,12 +117,12 @@
     /* border: 1px solid var(--dark-800); */
 }
 
-.box>p{
+.box > p{
     margin: 0;
     text-align: center;
 }
 
-.box>p:first-child{
+.box > p:first-child{
     font-size: 1.8rem;
 }
 
@@ -187,13 +180,26 @@
     background-color: white;
     border: 1px solid var(--dark-800);
 }
+
 .secondary-button:hover{
     border-color: black;
 }
 
+#client-wrapper, #expertise-wrapper{
+    padding: 2rem 1rem;
+}
 
-#expertise-wrapper{
-    padding: 3rem 5rem 5rem calc(260px + 5rem);
+#use-cases{
+    width: 100%;
+    background-color: var(--dark-300);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#use-cases .headline-subtext{
+    color: var(--dark-850);
 }
 
 #footer{
@@ -211,3 +217,87 @@
         transform: translateY(-15%);
     }
 }
+
+
+@media only screen and (min-width: 640px){
+
+    #expertise-wrapper{
+        padding: 2rem 3rem 2rem 3rem;
+    }
+
+    #client-wrapper{
+        padding: 2rem 3rem 2rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 1024px){
+    .introduction-wrapper{
+        padding: 0rem 0rem 0rem 260px;
+    }
+    #expertise-wrapper{
+        padding: 3rem 5rem 5rem calc(260px + 5rem);
+    }
+    #client-wrapper{
+        padding: 2rem 5rem 2rem calc(260px + 5rem);
+    }
+    #use-cases{
+        padding: 5rem 5rem 5rem calc(260px + 5rem);
+    }
+    .headline-wrapper{
+        padding: 5rem 0 5rem 5rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    #sidebar{
+        display: block;
+    }
+    .introduction-wrapper{
+        padding: 0rem 0rem 0rem 260px;
+    }
+    #expertise-wrapper{
+        padding: 3rem 5rem 5rem calc(260px + 5rem);
+    }
+    #client-wrapper{
+        padding: 2rem 5rem 2rem calc(260px + 5rem);
+    }
+    #use-cases{
+        padding: 5rem 5rem 5rem calc(260px + 5rem);
+    }
+    .headline-wrapper{
+        padding: 5rem 0 5rem 5rem;
+    }
+}
+
+@media only screen and (min-width: 1536px){
+    #sidebar{
+        display: block;
+    }
+    .introduction-wrapper{
+        padding: 0rem 0rem 0rem 260px;
+    }
+    #expertise-wrapper{
+        padding: 3rem 5rem 5rem calc(260px + 5rem);
+    }
+    #client-wrapper{
+        padding: 2rem 5rem 2rem calc(260px + 5rem);
+    }
+    #use-cases{
+        padding: 5rem 5rem 5rem calc(260px + 5rem);
+    }
+    .headline-wrapper{
+        padding: 5rem 0 5rem 5rem;
+    }
+}
+
+
+
+/* 
+    business problem, solution, benefits from this solution
+ */
+
+

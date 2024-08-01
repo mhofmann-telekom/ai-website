@@ -1,9 +1,9 @@
 #card-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
-    height: 35dvh;
+    flex-direction: column;
+    width: 100%;
 }
 
 .card{
@@ -14,7 +14,8 @@
     flex-direction: column;
     gap: 1.8rem;
     width: 25%;
-    height: 100%;
+    min-width: 300px;
+    aspect-ratio: 1/1;
     /* box-shadow: .1rem .5rem 2rem rgb(223, 223, 226); */
 }
 
@@ -27,4 +28,41 @@
     font-size: .9rem;
     font-family: "TeleNeo Regular";
     color: var(--dark-600);
+}
+
+
+/* 
+sm: 640px (Small devices like tablets)
+md: 768px (Medium devices like small laptops)
+lg: 1024px (Large devices like laptops)
+xl: 1280px (Extra large devices like desktops)
+2xl: 1536px (Larger desktops)
+*/
+
+@media only screen and (min-width: 640px){
+
+}
+
+@media only screen and (min-width: 768px){
+    
+}
+
+@media only screen and (min-width: 1024px){
+    #card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    #card-wrapper{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1536px){
+    #card-wrapper{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 }

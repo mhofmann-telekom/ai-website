@@ -13,6 +13,7 @@
     font-size: 20px;
     font-family: "TeleNeo Bold";
     color: white;
+    display: none;
 }
 
 #logo-wrapper{
@@ -84,4 +85,31 @@
     margin-top: auto;
     font-size: 15px;
     font-family: "TeleNeo Regular";
+}
+
+
+@media only screen and (min-width: 640px){
+    
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 1024px){
+    #sidebar{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    #sidebar{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1536px){
+    #sidebar{
+        display: block;
+    }
 }
