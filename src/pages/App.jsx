@@ -160,25 +160,33 @@ function App() {
             >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} intensity={1} />
-              <Tubes curves={biologyCurves} />
-              <Particles curves={biologyCurves} />
+              <group rotation={[0, 0, Math.PI / 3.3]}>
+                <Tubes curves={biologyCurves} />
+                <Particles curves={biologyCurves} />
+              </group>
               <OrbitControls enableZoom={false} />
             </Canvas>
           </div>
-          <div id="healthcare-content">
-            <h3 className="headline-h3 uppercase">DentaScan</h3>
-            <img className="use-case-image" src={DentaScan}/>
-            <p>
-              DentaScan is an advanced software tool designed for precise segmentation of dental structures in 
-              DICOM (Digital Imaging and Communications in Medicine) scans. Leveraging the power of MONAI (Medical Open Network for AI), 
-              this software offers cutting-edge image segmentation capabilities tailored specifically for dental imaging data. 
-              By utilizing state-of-the-art algorithms and machine learning techniques, DentaScan accurately identifies and delineates different dental structures such as teeth, roots, and surrounding tissues from DICOM scans. 
-              This enables dental professionals to perform detailed analysis, treatment planning, and diagnosis with enhanced precision and efficiency. 
-              DentaScan streamlines the workflow for dental practitioners, facilitating better patient care and treatment outcomes.
-            </p>
+          <div id="dentascan">
+            <h4 className="branch-text">Healthcare</h4>
+            <div className="card-container">
+              <h3 className="headline-h3 uppercase">DentaScan</h3>
+              <p className="card-headline margin-top-2rem">Business Problem:</p>
+              <p className="card-text">Dental imaging and diagnosis often face challenges in accurately segmenting and analyzing complex dental structures from DICOM scans, leading to inefficient workflows and potential inaccuracies in treatment planning.</p>
+            </div>
+            <div className="card-container">
+              <img className="use-case-image" src={DentaScan}/>
+            </div>
+            <div className="card-container">
+              <p className="card-headline">Solution:</p>
+              <p className="card-text margin-top-2rem">DentaScan utilizes MONAI-powered algorithms to provide advanced image segmentation of dental structures from DICOM scans, offering precise identification and delineation of teeth, roots, and surrounding tissues.</p>
+            </div>
+            <div className="card-container">
+              <p className="card-headline">Benefits:</p>
+              <p className="card-text margin-top-2rem">DentaScan enhances diagnostic accuracy and treatment planning, streamlines dental workflows, and improves patient care and outcomes through its cutting-edge segmentation technology.</p>
+            </div>
           </div>
         </div>
-        
       </div>
       {/* <div style={{backgroundColor:"black", height: "100dvh"}}>
         <Canvas
