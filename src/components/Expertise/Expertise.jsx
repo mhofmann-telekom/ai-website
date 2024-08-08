@@ -32,7 +32,7 @@ export default function Expertise(){
   }, []);
 
   return (
-    <div id="expertise-wrapper">
+    <div id="expertise">
       <h2 className="headline-h2">Our expertise:</h2>
       <p className="headline-subtext margin-y-2rem">Explore the depth of our professional capabilities, where our team's diverse expertise excels across various fields. <br/> We deliver innovative, tailored solutions, ensuring excellence and mastery in every project.</p>
       <div id="card-wrapper">

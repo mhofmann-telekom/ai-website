@@ -16,6 +16,8 @@ import Contact from '../components/Contact/Contact';
 import Expertise from '../components/Expertise/Expertise';
 
 import DentaScan from '../assets/img/DentaScan.png';
+import Clients from '../components/Clients/Clients';
+import Footer from '../components/Footer/Footer';
 
 const PATHS = data.economics[0].paths;
 const brainCurves = [];
@@ -120,7 +122,7 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="shape-wrapper">
+        <div id="shape-wrapper">
           {/* <svg id="shape" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0" y="0" width="200%" height="100%" rx="29" fill="var(--dark-300)" />
           </svg> */}
@@ -142,11 +144,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="client-wrapper">
-        <h2 className="headline-h2">Our clients & partners:</h2>
-        <p className="headline-subtext margin-y-2rem">We proudly showcase the diverse organizations and individuals we have had the privilege of partnering with.</p>
-        <Slider></Slider>
-      </div>
+      <Clients></Clients>
       <Expertise></Expertise>
       <div id="use-cases">
         <div>
@@ -196,9 +194,7 @@ function App() {
         </Canvas>
       </div> */}
       <Contact></Contact>
-      <div id="footer">
-        <span>T-Systems © {new Date().getFullYear().toString()} - All Rights Reserved.</span>
-      </div>
+      <Footer></Footer>
     </>
   );
 }
