@@ -58,8 +58,8 @@ export default function Sidebar(){
             <span>AI-HUB</span>
           </a>
           <div className="menu-button" onClick={()=>{setShowSidebar(!showSidebar)}}>
-            {!showSidebar && <MenuIcon size="25" strokeColor='var(--dark-950)'></MenuIcon>}
-            {showSidebar && <CrossIcon size="25" strokeColor="var(--dark-950)"></CrossIcon>}
+            {!showSidebar && <MenuIcon size={25} strokeColor='var(--dark-950)'></MenuIcon>}
+            {showSidebar && <CrossIcon size={25} strokeColor="var(--dark-950)"></CrossIcon>}
           </div>
         </div>
         <div id="sidebar-mobile-overlay" onClick={()=>{setShowSidebar(!showSidebar)}} className={(showSidebar === false ? 'hidden' : 'visible')}></div>
