@@ -1,5 +1,6 @@
 import './Sidebar.css'
 import logo from "./../../assets/icons/logo-t-systems-white.svg";
+import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import MenuIcon from '../../assets/icons/Menu-Icon';
 import ConfluenceIcon from '../../assets/icons/Confluence-Icon';
@@ -17,24 +18,24 @@ export default function Sidebar(){
   return (
     <>
       <div id="sidebar">
-        <a href="/" id="logo-wrapper">
+        <Link to="/" id="logo-wrapper">
           <img src={logo} alt="" id="logo"/>
           <span>AI-HUB</span>
-        </a>
+        </Link>
         <div id="nav-item-wrapper">
           <p className="info-text">Navigation</p>
-          <div className="nav-item">
+          <Link to="/confluence" className="nav-item">
             <ConfluenceIcon></ConfluenceIcon>
             <span>Confluence portal</span>
-          </div>
+          </Link>
           <a href="/#use-cases" className="nav-item">
             <SettingsIcon fillColor='white' strokeColor='var(--magenta)'></SettingsIcon>
             <span>Use cases</span>
           </a>
-          <div className="nav-item">
+          <Link to="/architecture" className="nav-item">
             <ArchitectureIcon></ArchitectureIcon>
             <span>Architecture</span>
-          </div>
+          </Link>
           <div className="nav-item">
             <RessourcesIcon></RessourcesIcon>
             <span>Ressources</span>
@@ -53,10 +54,10 @@ export default function Sidebar(){
 
       <>
         <div id="header-mobile">
-          <a href="/" id="logo-wrapper">
+          <Link to="/" id="logo-wrapper">
             <img src={logo} alt="" id="logo"/>
             <span>AI-HUB</span>
-          </a>
+          </Link>
           <div className="menu-button" onClick={()=>{setShowSidebar(!showSidebar)}}>
             {!showSidebar && <MenuIcon size={25} strokeColor='var(--dark-950)'></MenuIcon>}
             {showSidebar && <CrossIcon size={25} strokeColor="var(--dark-950)"></CrossIcon>}
@@ -66,18 +67,18 @@ export default function Sidebar(){
         <div id="sidebar-mobile" className={(showSidebar === false ? 'hidden' : 'visible')}>
           <div id="nav-item-wrapper">
             <p className="info-text">Navigation</p>
-            <div className="nav-item">
+            <Link to="/confluence" className="nav-item">
               <ConfluenceIcon fillColor="var(--dark-500)"></ConfluenceIcon>
               <span>Confluence portal</span>
-            </div>
+            </Link>
             <a href="/#use-cases" className="nav-item">
               <SettingsIcon></SettingsIcon>
               <span>Use cases</span>
             </a>
-            <div className="nav-item">
+            <Link to="/architecture" className="nav-item">
               <ArchitectureIcon fillColor="var(--dark-500)"></ArchitectureIcon>
               <span>Architecture</span>
-            </div>
+            </Link>
             <div className="nav-item">
               <RessourcesIcon fillColorPrimary='var(--dark-500)' fillColorSecondary='var(--dark-950)'></RessourcesIcon>
               <span>Ressources</span>
