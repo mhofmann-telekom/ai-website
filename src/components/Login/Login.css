@@ -76,7 +76,7 @@
 }
 
 .input-wrapper:has(>input:focus)>span, .input-wrapper:has(>input:not(:placeholder-shown))>span{
-    transform: translateY(-18px) scale(.8);
+    transform: translate(-10px, -18px) scale(.8);
 }
 
 .input-wrapper:has(>input:focus)>span{

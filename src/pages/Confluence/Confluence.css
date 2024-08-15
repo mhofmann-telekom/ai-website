@@ -4,14 +4,13 @@
 
 #confluence .headline-wrapper{
     padding-left: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
+    gap: 4rem;
 }
 
-/* #image-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-} */
+#confluence .headline-subtext{
+    font-size: 1.3rem;
+}
 
 #image-wrapper img{
     width: 100%;
@@ -24,6 +23,7 @@
     color: var(--dark-700);
     font-family: "TeleNeo Regular";
     margin: 0 0 1.5rem 0;
+    font-size: 1.3rem;
 }
 
 .meta-information > a{
@@ -40,9 +40,10 @@
 }
 
 .meta-information > a::after{
+    display: none;
     position: absolute;
-    top: 2px;
-    left: 101%;
+    top: 5px;
+    right: -20px;
     content: '';
     mask: url('data:image/svg+xml;utf8,<svg style="transform: rotate(-45deg)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>') center / contain no-repeat;
     width: 15px;
@@ -62,12 +63,17 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+    .meta-information > a::after{
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     #confluence{
         padding: 3rem 5rem 5rem calc(260px + 5rem);
+    }
+    .meta-information > a::after{
+        display: block;
     }
 }
 
@@ -75,10 +81,16 @@
     #confluence{
         padding: 3rem 5rem 5rem calc(260px + 5rem);
     }
+    .meta-information > a::after{
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1536px) {
     #confluence{
-        padding: 3rem 5rem 5rem calc(260px + 5rem);
+        padding: 3rem 8rem 5rem calc(260px + 8rem);
+    }
+    .meta-information > a::after{
+        display: block;
     }
 }

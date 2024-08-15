@@ -1,5 +1,6 @@
 #expertise{
-    padding: 2rem 1rem;
+    padding: 2rem;
+    /* background: linear-gradient(var(--dark-950), var(--dark-900)); */
 }
 
 #card-wrapper{
@@ -11,9 +12,10 @@
 }
 
 .card{
-    background-color: var(--dark-900);
-    border: 1px solid var(--dark-800);
+    background-color: var(--dark-950);
+    border: 1px solid var(--dark-850);
     padding: 1rem;
+    transition: all 200ms;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -25,6 +27,11 @@
     /* box-shadow: .1rem .5rem 2rem ; */
 }
 
+.card:hover{
+    border-color: var(--dark-700);
+    transform: translateY(-3px);
+}
+
 .card h3{
     font-size: 1.5rem;
     font-family: "TeleNeo Regular";
@@ -33,7 +40,7 @@
 .card p{
     font-size: .9rem;
     font-family: "TeleNeo Regular";
-    color: var(--dark-600);
+    color: var(--dark-700);
 }
 
 

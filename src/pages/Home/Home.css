@@ -2,21 +2,19 @@
 .introduction-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    height: minmax(100vh, fit-content);
     width: 100%;
     background-color: var(--dark-950);
     overflow: hidden;
 }
 
 .headline-wrapper {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
     text-wrap: wrap;
     row-gap: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 7rem;
+    width: 90%;
 }
 
 .headline-h1{
@@ -111,6 +109,7 @@
     margin-top: 2rem;
     background-color: var(--dark-900);
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .box{
@@ -139,10 +138,18 @@
 
 .button-wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-top: 2rem;
+}
+
+.button-wrapper .primary-button, .button-wrapper .secondary-button{
+    width: 100%;
+}
+
+.button-wrapper > span{
+    display: none;
 }
 
 .primary-button, .secondary-button{
@@ -199,6 +206,7 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    padding: 2rem;
 }
 
 #use-cases .headline-subtext{
@@ -215,19 +223,18 @@
 }
 
 #healthcare .canvas-container{
+    display: none;
     width: 20%;
 }
 #dentascan{
     position: relative;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     background-color: var(--dark-500);
     border-radius: 0 10px 10px 10px;
     border: 1px solid var(--dark-600);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 #dentascan .branch-text{
@@ -242,7 +249,6 @@
     border: inherit;
     border-bottom: 0;
     border-radius: 10px 10px 0 0;
-    /* color: var(--dark-700); */
     color: lightskyblue;
 }
 
@@ -276,7 +282,7 @@
     border-right: 1px solid var(--dark-600);
 }
 
-#healthcare .use-case-image{
+#dentascan .use-case-image{
     width: 100%;
     object-fit: cover;
     filter: invert(.898);
@@ -286,19 +292,66 @@
     .introduction-wrapper .canvas-container{
         transform: translateY(-15%);
     }
+
+    #use-cases{
+        padding: 5rem 5rem 5rem 5rem;
+    }
+    #healthcare .canvas-container{
+        display: none;
+    }
+    #dentascan{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 767px) {
     .headline-wrapper{
         padding: 3rem;
+        width: 100%
+    }
+    .box-wrapper{
+        flex-direction: row;
     }
     .button-wrapper{
         flex-direction: row;
+    }
+    .button-wrapper > span{
+        display: block;
+    }
+    .button-wrapper .primary-button, .button-wrapper .secondary-button{
+        width: max-content;
+    }
+    #dentascan{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* Add specific styles if needed */
+    .headline-wrapper{
+        padding: 3rem;
+        width: 100%
+    }
+    .box-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper > span{
+        display: block;
+    }
+    .button-wrapper .primary-button, .button-wrapper .secondary-button{
+        width: max-content;
+    }
+    #use-cases{
+        padding: 5rem 5rem 5rem 5rem;
+    }
+    #dentascan{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -306,15 +359,32 @@
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr 100px 1fr;
     }
+    .box-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper > span{
+        display: block;
+    }
+    .button-wrapper .primary-button, .button-wrapper .secondary-button{
+        width: max-content;
+    }
     #use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     .headline-wrapper{
         padding: 5rem 0 5rem 5rem;
         margin-top: 0;
+        width: 100%;
     }
     #shape-wrapper{
         display: grid;
+    }
+    #dentascan{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
 
@@ -323,15 +393,35 @@
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr 100px 1fr;
     }
+    .box-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper > span{
+        display: block;
+    }
+    .button-wrapper .primary-button, .button-wrapper .secondary-button{
+        width: max-content;
+    }
     #use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     .headline-wrapper{
         padding: 5rem 0 5rem 5rem;
         margin-top: 0;
+        width: 100%;
     }
     #shape-wrapper{
         display: grid;
+    }
+    #dentascan{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #healthcare .canvas-container{
+        display: block;
     }
 }
 
@@ -340,15 +430,36 @@
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr 100px 1fr;
     }
+    .box-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper{
+        flex-direction: row;
+    }
+    .button-wrapper > span{
+        display: block;
+    }
+    .button-wrapper .primary-button, .button-wrapper .secondary-button{
+        width: max-content;
+    }
     #use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     .headline-wrapper{
         padding: 5rem 0 5rem 5rem;
         margin-top: 0;
+        width: 100%;
     }
     #shape-wrapper{
         display: grid;
+    }
+
+    #dentascan{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #healthcare .canvas-container{
+        display: block;
     }
 }
 
