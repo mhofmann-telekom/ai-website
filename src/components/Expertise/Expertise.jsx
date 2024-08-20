@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Expertise(){
 
   useEffect(() => {
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll("#expertise .card");
     
     cards.forEach((card, index) => {
       gsap.fromTo(card, 

@@ -11,7 +11,7 @@
     width: 100%;
 }
 
-.card{
+#expertise .card{
     background-color: var(--dark-950);
     border: 1px solid var(--dark-850);
     padding: 1rem;
@@ -27,17 +27,17 @@
     /* box-shadow: .1rem .5rem 2rem ; */
 }
 
-.card:hover{
+#expertise .card:hover{
     border-color: var(--dark-700);
     transform: translateY(-3px);
 }
 
-.card h3{
+#expertise .card h3{
     font-size: 1.5rem;
     font-family: "TeleNeo Regular";
 }
 
-.card p{
+#expertise .card p{
     font-size: .9rem;
     font-family: "TeleNeo Regular";
     color: var(--dark-700);

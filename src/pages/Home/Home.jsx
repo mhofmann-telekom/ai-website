@@ -17,6 +17,7 @@ import Expertise from './../../components/Expertise/Expertise';
 import DentaScan from './../../assets/img/DentaScan.png';
 import Clients from './../../components/Clients/Clients';
 import Footer from './../../components/Footer/Footer';
+import Ressources from '../../components/Ressources/Ressources';
 
 const PATHS = data.economics[0].paths;
 const brainCurves = [];
@@ -187,6 +188,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Ressources></Ressources>
       {/* <div style={{backgroundColor:"black", height: "100dvh"}}>
         <Canvas
           style={{ width: "100%", height: "100%", display: "grid", placeItems: "center" }}
