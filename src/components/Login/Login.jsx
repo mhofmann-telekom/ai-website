@@ -29,7 +29,7 @@ const Login = () => {
         <div id="login-background">
             <div id="login-wrapper">
                 <h1>Login</h1>
-                <p className="login-infotext">The access to the requested ressource is restricted and requires authentication by password.</p>
+                <p className="login-infotext additional-information-wrapper">The access to the requested ressource is restricted and requires authentication by password.</p>
                 <div id="password-wrapper">
                     <label class="input-wrapper">
                         <span>Password</span>

@@ -23,12 +23,12 @@ function Ressources() {
                     y: 0,
                     x: 0,
                     opacity: 1,
-                    delay: 0.1,
+                    delay: 1,
                     ease: 'power1.out',
                     scrollTrigger: {
                         trigger: card,
                         start: 'top bottom', // Startpunkt für die Animation
-                        end: 'top center',
+                        end: 'bottom center',
                         toggleActions: 'play none none none', // Aktionen bei Scroll-Ereignissen
                         scrub: true,
                     }
@@ -44,7 +44,7 @@ function Ressources() {
                     duration: 1,
                     y: 0,
                     opacity: 1,
-                    delay: 0.3,
+                    delay: 1,
                     ease: 'power1.out',
                     scrollTrigger: {
                         trigger: item,

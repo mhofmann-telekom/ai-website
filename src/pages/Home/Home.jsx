@@ -172,18 +172,18 @@ function App() {
             <div className="card-container">
               <h3 className="headline-h3 uppercase">DentaScan</h3>
               <p className="card-headline margin-top-2rem">Business Problem:</p>
-              <p className="card-text">Dental imaging and diagnosis often face challenges in accurately segmenting and analyzing complex dental structures from DICOM scans, leading to inefficient workflows and potential inaccuracies in treatment planning.</p>
+              <p className="card-text margin-top-1rem">Dental imaging and diagnosis often face challenges in accurately segmenting and analyzing complex dental structures from DICOM scans, leading to inefficient workflows and potential inaccuracies in treatment planning.</p>
             </div>
             <div className="card-container">
               <img className="use-case-image" src={DentaScan}/>
             </div>
             <div className="card-container">
               <p className="card-headline">Solution:</p>
-              <p className="card-text margin-top-2rem">DentaScan utilizes MONAI-powered algorithms to provide advanced image segmentation of dental structures from DICOM scans, offering precise identification and delineation of teeth, roots, and surrounding tissues.</p>
+              <p className="card-text margin-top-1rem">DentaScan utilizes MONAI-powered algorithms to provide advanced image segmentation of dental structures from DICOM scans, offering precise identification and delineation of teeth, roots, and surrounding tissues.</p>
             </div>
             <div className="card-container">
               <p className="card-headline">Benefits:</p>
-              <p className="card-text margin-top-2rem">DentaScan enhances diagnostic accuracy and treatment planning, streamlines dental workflows, and improves patient care and outcomes through its cutting-edge segmentation technology.</p>
+              <p className="card-text margin-top-1rem">DentaScan enhances diagnostic accuracy and treatment planning, streamlines dental workflows, and improves patient care and outcomes through its cutting-edge segmentation technology.</p>
             </div>
           </div>
         </div>

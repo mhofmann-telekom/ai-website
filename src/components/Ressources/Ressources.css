@@ -1,6 +1,6 @@
 
 #ressources{
-    padding: 2rem;
+    padding: 5rem 2rem;
     background-color: var(--dark-950);
     display: flex;
     align-items: start;
@@ -11,12 +11,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 #ressources #card-wrapper{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 #ressources .card{
@@ -37,6 +38,10 @@
     align-items: center;
     gap: 1.8rem;
     height: 50px;   
+}
+
+#ressources .card .headline-subtext{
+    font-size: 1rem;
 }
 
 #ressources .card .icon-wrapper > svg, #ressources .card .icon-wrapper > img{
@@ -157,7 +162,7 @@
     width: 3px;
     border-radius: 100px;
     max-height: 100%;
-    min-height: 240px;
+    min-height: 180px;
     background-color: var(--blue);
 }
 
@@ -185,18 +190,18 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     #ressources{
-        padding: 5rem 5rem 2rem calc(260px + 5rem);
+        padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
     #ressources{
-        padding: 5rem 5rem 2rem calc(260px + 5rem);
+        padding: 5rem 5rem 4rem calc(260px + 5rem);
     }
 }
 
 @media only screen and (min-width: 1536px) {
     #ressources{
-        padding: 5rem 5rem 2rem calc(260px + 5rem);
+        padding: 5rem 5rem 4rem calc(260px + 5rem);
     }
 }

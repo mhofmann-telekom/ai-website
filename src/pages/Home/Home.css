@@ -17,35 +17,6 @@
     width: 90%;
 }
 
-.headline-h1{
-    font-size: 2.6rem;
-}
-
-.headline-h2{
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-.headline-text{
-    font-size: 1.4rem;
-    margin: 0;
-    font-family: "TeleNeo Medium";
-}
-
-.headline-subtext{
-    font-size: 1.1rem;
-    color: var(--dark-600);
-    font-family: "TeleNeo Regular";
-}
-
-.margin-y-2rem{
-    margin: 2rem 0;
-}
-
-.margin-top-2rem{
-    margin-top: 2rem;
-}
-
 #description-wrapper{
     font-size: 1.3rem;
     color: lightblue;
@@ -68,7 +39,8 @@
 }
 
 .chip{
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: 100px;
     padding: .4rem .8rem;
     background-color: var(--blue);
     font-size: .95rem;
@@ -169,6 +141,7 @@
     margin: 0;
     transition: all 0.3ms;
     min-width: max-content;
+    transition: all 200ms;
 }
 
 .primary-button-icon{
@@ -177,6 +150,14 @@
     color: #fff;
     gap: 5px;
     padding-right: 1rem;
+}
+
+.primary-button-icon > svg, .primary-button-icon > img{
+    transition: all 200ms ease-in-out;
+}
+.primary-button-icon:hover > svg, .primary-button-icon:hover > img{
+    
+    transform: translateX(5px);
 }
 
 /* .primary-button{
@@ -267,8 +248,9 @@
 }
 
 #dentascan .card-text{
-    font-size: .9rem;
-    font-family: "TeleNeo Thin";
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-800);
 }
 
 #dentascan .card-container:first-of-type{

@@ -12,37 +12,171 @@
 }
 
 #expertise .card{
+    width: 300px;
+    aspect-ratio: 1/1;
+
+    padding: 2rem;
+    color: var(--dark-300);
     background-color: var(--dark-950);
     border: 1px solid var(--dark-850);
-    padding: 1rem;
-    transition: all 200ms;
     border-radius: 10px;
+    box-shadow: 5px 5px 50px var(--dark-850);
+    position: relative;
+    overflow: hidden;
+    transition: all 200ms;
+}
+
+#expertise .card .general-information-wrapper{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
-    /* width: 25%; */
-    /* min-width: 300px; */
-    width: 300px;
-    aspect-ratio: 1/1;
-    /* box-shadow: .1rem .5rem 2rem ; */
+    transition: all 300ms;
+}
+
+#expertise .card .general-information-wrapper h3{
+    color: var(--dark-100);
+}
+
+#expertise .card .more-information-wrapper{
+    display: none;
+    opacity: 0;
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    color: var(--dark-950);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    z-index: 0;
+}
+
+#expertise .card .more-information-wrapper > p{
+    font-size: .90rem;
 }
 
 #expertise .card:hover{
-    border-color: var(--dark-700);
+    border-color: var(--dark-800);
     transform: translateY(-3px);
+}
+
+#expertise .card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -16px;
+    right: -16px;
+    background: var(--magenta);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(3);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+  
+#expertise .card:hover::before {
+    transform: scale(30);
+}
+
+#expertise .card:hover .more-information-wrapper {
+    display: flex;
+    opacity: 1;
+}
+
+#expertise .card:hover .general-information-wrapper {
+    display: none;
+    opacity: 0;
 }
 
 #expertise .card h3{
     font-size: 1.5rem;
-    font-family: "TeleNeo Regular";
+    font-family: "TeleNeo Regular";    
+    z-index: 10;
 }
 
-#expertise .card p{
-    font-size: .9rem;
+#expertise .card .general-information-wrapper{
+    font-size: 1rem;
     font-family: "TeleNeo Regular";
-    color: var(--dark-700);
+    color: var(--dark-600);
+    z-index: 10;
 }
 
+#expertise .card .general-information-wrapper ul{
+    padding-left: 1rem;
+}
+
+#expertise .card svg{
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    z-index: 10;
+}
+
+#expertise .card .frontend-abstract-element{
+    display: grid;
+    place-items: center;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: -50%;
+    right: -50%;
+    border-radius: 100%;
+    border: 0;
+    padding: 2rem;
+    z-index: 0;
+}
+
+/* 
+#expertise .card .analytics-abstract-element{
+    display: grid;
+    place-items: center;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    border-radius: 100%;
+    border: 0;
+    padding: 2rem;
+    z-index: 0;
+}
+
+#expertise .frontend-abstract-element div, #expertise .analytics-abstract-element div{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    border: 1px solid var(--dark-800);
+}
+
+#expertise .infrastructure-abstract-element{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="none" stroke="%23bcbcbe" stroke-width="2" transform="scale(1,-1)" ><path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z" fill="%23FFFFFF"></path></svg>');
+}
+
+#expertise .backend-abstract-element{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="none" stroke="%23bcbcbe" stroke-width="2"><path d="M0 0v90.2C49.7 99.9 105 82 160 65c75.5-23.3 145.5-22.4 222-3 63 16 119 14 173-8 79.5-32.4 156.2-27.6 240-10 82.6 17.4 143-1 205-31.7V0H0Z" fill="%23FFFFFF"></path></svg>');
+} */
 
 /* 
 sm: 640px (Small devices like tablets)
