@@ -3,8 +3,59 @@ import "./Ressources.css"
 import teams_image from './../../assets/icons/microsoft-teams.svg';
 import jira_image from './../../assets/icons/jira.svg';
 import confluence_image from './../../assets/icons/confluence.svg';
+import { useRef, useEffect } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Ressources() {
+
+    const planningCard = useRef(null);
+    const developmentCard = useRef(null);
+    const teamworkCard = useRef(null);
+  
+    useEffect(() => {
+        const cards = [planningCard.current, developmentCard.current, teamworkCard.current];
+        cards.forEach((card) => {
+            gsap.fromTo(card,
+                { y: 50, x:30, opacity: 0,},
+                {
+                    duration: 1,
+                    y: 0,
+                    x: 0,
+                    opacity: 1,
+                    delay: 0.1,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top bottom', // Startpunkt für die Animation
+                        end: 'top center',
+                        toggleActions: 'play none none none', // Aktionen bei Scroll-Ereignissen
+                        scrub: true,
+                    }
+                }
+            );
+        });
+
+        const timelineElements = document.querySelectorAll("#timeline > *");
+        timelineElements.forEach((item) => {
+            gsap.fromTo(item,
+                { y: -20, opacity: 0,},
+                {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    delay: 0.3,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top bottom', // Startpunkt für die Animation
+                        toggleActions: 'play none none none', // Aktionen bei Scroll-Ereignissen
+                    }
+                }
+            );
+        });
+    }, []);
+
   return (
     <div id="ressources">
         <div id="timeline">
@@ -34,7 +85,7 @@ function Ressources() {
                 <h2 className="headline-h2">Which Ressources do we use?</h2>
                 <p className="headline-subtext">Welcome to our Resources section, where you will find key tools, processes, and materials that drive our projects. Explore our methodologies, technologies, and essential guides that support our success. Use these resources to understand our workflow and achieve your goals effectively.</p>
             </div>
-            <div className="card">
+            <div className="card" ref={planningCard}>
                 <div className="card-content">
                     <h3 className="headline-h3">Planning & Design</h3>
                     <p className="headline-subtext">Unser Entwicklungsprozess beginnt mit der Planung & Design, bei der wir Draw.io für Flussdiagramme und Microsoft Visio für detaillierte Diagramme verwenden. Diese Tools sichern eine präzise und zielgerichtete Planung für die nächsten Entwicklungsphasen.</p>
@@ -55,7 +106,7 @@ function Ressources() {
                     <div id="circle-shape"></div>
                 </div>
             </div>
-            <div className="card">
+            <div className="card" ref={developmentCard}>
                 <div className="card-content">
                     <h3 className="headline-h3">Development & Infrastructure</h3>
                     <p className="headline-subtext">We start with Planning & Design, using Draw.io for flowcharts and architecture merging, and Microsoft Visio for detailed diagrams. These tools ensure precise planning, laying a strong foundation for the development phase.</p>
@@ -88,7 +139,7 @@ function Ressources() {
                     <div id="box-shape"></div>
                 </div>
             </div>
-            <div className="card">
+            <div className="card" ref={teamworkCard}>
                 <div className="card-content">
                     <h3 className="headline-h3">Teamwork & Collaboration</h3>
                     <p className="headline-subtext">Teamwork & Collaboration are crucial throughout the process. We use Jira for task management, MS Teams for communication, Confluence for knowledge sharing, and GitHub for code collaboration. Together, these tools ensure seamless coordination and drive project success.</p>
