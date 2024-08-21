@@ -36,10 +36,10 @@ export default function Sidebar(){
             <ArchitectureIcon></ArchitectureIcon>
             <span>Architecture</span>
           </Link>
-          <div className="nav-item">
+          <a href="/#ressources" className="nav-item">
             <RessourcesIcon></RessourcesIcon>
             <span>Ressources</span>
-          </div>
+          </a>
           <a href="/#expertise" className="nav-item">
             <ExpertiseIcon></ExpertiseIcon>
             <span>Our expertise</span>
@@ -79,10 +79,10 @@ export default function Sidebar(){
               <ArchitectureIcon fillColor="var(--dark-500)"></ArchitectureIcon>
               <span>Architecture</span>
             </Link>
-            <div className="nav-item">
+            <a href="/#ressources" className="nav-item">
               <RessourcesIcon fillColorPrimary='var(--dark-500)' fillColorSecondary='var(--dark-950)'></RessourcesIcon>
               <span>Ressources</span>
-            </div>
+            </a>
             <a href="/#expertise" className="nav-item">
               <ExpertiseIcon fillColorPrimary="var(--dark-500)" fillColorSecondary='var(--dark-950)'></ExpertiseIcon>
               <span>Our expertise</span>
