@@ -41,7 +41,7 @@
 .chip{
     /* border-radius: 5px; */
     border-radius: 100px;
-    padding: .4rem .8rem;
+    padding: .4rem .9rem;
     background-color: var(--blue);
     font-size: .95rem;
     font-family: "TeleNeo Regular";
@@ -265,10 +265,32 @@
 }
 
 #dentascan .use-case-image{
+    position: relative;
+}
+
+#dentascan .use-case-image > img{
     width: 100%;
     object-fit: cover;
     filter: invert(.898);
 }
+
+#dentascan .use-case-image::after {
+    content: attr(data-imageText);
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    color: var(--dark-800);
+    font-size: .8rem;
+    font-family: "TeleNeo Regular";
+
+    display: inline-block;
+    padding-left: 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg data-icon-name="information-circle" data-style="line" icon_origin_id="20497" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="information-circle" class="icon line" width="24" height="24"><line style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" y2="8" x2="11.95" y1="8" x1="12.05" id="primary-upstroke"></line><path style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;" d="M3,12a9,9,0,0,1,9-9h0a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9Zm9,1v3" id="primary"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 0 50%;
+}
+
 
 @media (max-height: 650px) {
     .introduction-wrapper .canvas-container{

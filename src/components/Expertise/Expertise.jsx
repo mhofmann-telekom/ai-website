@@ -45,9 +45,9 @@ export default function Expertise(){
               <span className="headline-subtext">We expertise in:</span>
               <ul>
                 <li>Cutting-edge Technologies</li>
-                <li>Beautiful Interfaces</li>
-                <li>Device independent</li>
-                <li>User friendly</li>
+                <li>Beautiful interfaces</li>
+                <li>Device independence</li>
+                <li>User friendlyness</li>
                 <li>Optimal user experience</li>
               </ul>
             </div>

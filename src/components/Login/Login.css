@@ -1,5 +1,5 @@
 #login-background{
-    background-color: var(--dark-950);
+    background-color: var(--dark-900);
     width: 100dvw;
     height: 100dvh;
     display: grid;
@@ -9,24 +9,25 @@
 #login-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     height: 350px;
     aspect-ratio: 10/11;
     border-radius: 10px;
     background-color: var(--dark-950);
     padding: 1.5rem;
-    box-shadow: .1rem .1rem 1rem var(--dark-850);
+    box-shadow: .2rem .2rem 1rem var(--dark-800);
+    gap: 1.5rem;
 }
 
 #login-wrapper h1{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: "TeleNeo Regular";
 }
 
 .login-infotext{
-    font-size: .8rem;
-    color: var(--dark-700);
-    font-family: "TeleNeo Medium";
+    font-size: .9rem;
+    color: var(--dark-600);
+    font-family: "TeleNeo Regular";
     /* padding: .5rem; */
     /* background-color: var(--dark-900); */
     border-radius: 5px;
@@ -41,7 +42,7 @@
 
 .input-wrapper{
     position: relative;
-    height: 35px;    
+    height: 35px;
 }
 
 .input-wrapper>input{
@@ -99,6 +100,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    margin-top: auto;
 }
 
 #login-button, #back-button{

@@ -17,20 +17,20 @@ function Ressources() {
         const cards = [planningCard.current, developmentCard.current, teamworkCard.current];
         cards.forEach((card) => {
             gsap.fromTo(card,
-                { y: 50, x:30, opacity: 0,},
+                { y: 0, x:-30, opacity: 0,},
                 {
                     duration: 1,
                     y: 0,
                     x: 0,
                     opacity: 1,
-                    delay: 1,
+                    delay: .6,
                     ease: 'power1.out',
                     scrollTrigger: {
                         trigger: card,
-                        start: 'top bottom', // Startpunkt für die Animation
+                        start: 'bottom bottom', // Startpunkt für die Animation
                         end: 'bottom center',
                         toggleActions: 'play none none none', // Aktionen bei Scroll-Ereignissen
-                        scrub: true,
+                        scrub: false,
                     }
                 }
             );
@@ -44,11 +44,11 @@ function Ressources() {
                     duration: 1,
                     y: 0,
                     opacity: 1,
-                    delay: 1,
+                    delay: .1,
                     ease: 'power1.out',
                     scrollTrigger: {
                         trigger: item,
-                        start: 'top bottom', // Startpunkt für die Animation
+                        start: 'top 70%', // Startpunkt für die Animation
                         toggleActions: 'play none none none', // Aktionen bei Scroll-Ereignissen
                     }
                 }

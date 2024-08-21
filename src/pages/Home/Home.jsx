@@ -175,7 +175,9 @@ function App() {
               <p className="card-text margin-top-1rem">Dental imaging and diagnosis often face challenges in accurately segmenting and analyzing complex dental structures from DICOM scans, leading to inefficient workflows and potential inaccuracies in treatment planning.</p>
             </div>
             <div className="card-container">
-              <img className="use-case-image" src={DentaScan}/>
+              <div class="use-case-image" data-imageText="mouth rontgen image">
+                <img src={DentaScan}/>
+              </div>
             </div>
             <div className="card-container">
               <p className="card-headline">Solution:</p>
