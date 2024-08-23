@@ -12,7 +12,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const STANDARD_PASSWORD = '123456';
+    const STANDARD_PASSWORD = 'abcdef';
 
     const from = location.state?.from?.pathname || '/';
 
