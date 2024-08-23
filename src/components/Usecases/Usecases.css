@@ -1,15 +1,24 @@
 
-#use-cases{
+.use-cases{
     width: 100%;
-    background-color: var(--dark-300);
-    color: white;
     display: flex;
     flex-direction: column;
     gap: 5rem;
     padding: 2rem;
+    color: black;
 }
 
-#use-cases .headline-subtext{
+.use-cases.background-dark{
+    background-color: var(--dark-300);
+    color: white;
+}
+
+.use-cases.background-light{
+    background-color: var(--dark-900);
+    color: var(--dark-300);
+}
+
+.use-cases .headline-subtext{
     color: var(--dark-850);
 }
 
@@ -26,6 +35,7 @@
     display: none;
     width: 20%;
 }
+
 #dentascan{
     position: relative;
     width: 100%;
@@ -61,17 +71,6 @@
     padding: 2rem;
 }
 
-#dentascan .card-headline{
-    font-size: 1rem;
-    font-family: "TeleNeo Medium";
-}
-
-#dentascan .card-text{
-    font-size: 1rem;
-    font-family: "TeleNeo Regular";
-    color: var(--dark-800);
-}
-
 #dentascan .card-container:first-of-type{
     border-bottom: 1px solid var(--dark-600);
     border-right: 1px solid var(--dark-600);
@@ -83,6 +82,17 @@
     border-right: 1px solid var(--dark-600);
 }
 
+#dentascan .card-headline{
+    font-size: 1rem;
+    font-family: "TeleNeo Medium";
+}
+
+#dentascan .card-text{
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-800);
+}
+
 #dentascan .use-case-image{
     position: relative;
 }
@@ -90,10 +100,10 @@
 #dentascan .use-case-image > img{
     width: 100%;
     object-fit: cover;
-    filter: invert(.898);
+    filter: invert(.898);    
 }
 
-#dentascan .use-case-image::after {
+#dentascan .use-case-image::after{
     content: attr(data-imagetext);
     position: absolute;
     bottom: -20px;
@@ -111,8 +121,189 @@
 }
 
 
+
+/* orion */
+#orion{
+    position: relative;
+    width: 80%;
+    background-color: var(--dark-950);
+    border-radius: 10px 0 10px 10px;
+    border: 1px solid var(--dark-850);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    box-shadow: 5px 5px 50px var(--dark-850);
+}
+
+#orion .branch-text{
+    width: 0;
+    height: 0;
+    border-left: 60px solid var(--dark-950);
+    border-right: 0px solid transparent;
+    border-bottom: 60px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%);
+}
+
+#orion .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+#orion .card-headline{
+    font-size: 1rem;
+    font-family: "TeleNeo Bold";
+    color: var(--dark-600);
+}
+
+#orion .card-text{
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-700);
+}
+
+#orion .card-container:first-of-type{
+    border-bottom: 1px solid var(--dark-850);
+    border-right: 1px solid var(--dark-850);
+}
+#orion .card-container:nth-of-type(2){
+    border-bottom: 1px solid var(--dark-850);
+}
+#orion .card-container:nth-of-type(3){
+    border-right: 1px solid var(--dark-850);
+}
+
+#orion .use-case-image > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#orion .use-case-image{
+    position: relative;
+    box-shadow: 5px 5px 50px var(--dark-850);
+}
+
+.headline-subtext.blue{
+    font-size: .9rem;
+    color: var(--blue);
+    font-family: "TeleNeo Bold";
+    text-transform: capitalize;
+}
+
+#orion .use-case-image::after{
+    content: attr(data-imagetext);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: var(--dark-800);
+    font-size: .8rem;
+    font-family: "TeleNeo Regular";
+
+    display: inline-block;
+    padding-left: 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg data-icon-name="information-circle" data-style="line" icon_origin_id="20497" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="information-circle" class="icon line" width="24" height="24"><line style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" y2="8" x2="11.95" y1="8" x1="12.05" id="primary-upstroke"></line><path style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;" d="M3,12a9,9,0,0,1,9-9h0a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9Zm9,1v3" id="primary"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 0 50%;   
+}
+
+
+/* speakpeak */
+#speakpeak{
+    position: relative;
+    width: 80%;
+    background-color: var(--dark-950);
+    border-radius: 10px;
+    border: 1px solid var(--dark-850);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    box-shadow: 5px 5px 50px var(--dark-850);
+}
+
+#speakpeak .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+#speakpeak .card-headline{
+    font-size: 1rem;
+    font-family: "TeleNeo Bold";
+    color: var(--dark-600);
+}
+
+#speakpeak .card-text{
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-700);
+}
+
+#speakpeak .card-container:first-of-type{
+    border-bottom: 1px solid var(--dark-850);
+    border-right: 1px solid var(--dark-850);
+}
+#speakpeak .card-container:nth-of-type(2){
+    border-bottom: 1px solid var(--dark-850);
+}
+#speakpeak .card-container:nth-of-type(3){
+    border-right: 1px solid var(--dark-850);
+}
+
+#speakpeak .use-case-image > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#speakpeak .use-case-image{
+    position: relative;
+    box-shadow: 5px 5px 50px var(--dark-850);
+}
+
+#speakpeak .use-case-image::after{
+    content: attr(data-imagetext);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: var(--dark-800);
+    font-size: .8rem;
+    font-family: "TeleNeo Regular";
+
+    display: inline-block;
+    padding-left: 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg data-icon-name="information-circle" data-style="line" icon_origin_id="20497" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="information-circle" class="icon line" width="24" height="24"><line style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" y2="8" x2="11.95" y1="8" x1="12.05" id="primary-upstroke"></line><path style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;" d="M3,12a9,9,0,0,1,9-9h0a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9Zm9,1v3" id="primary"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 0 50%;   
+}
+
+#speakpeak svg:first-child{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%) scale(20);
+    z-index: 0;
+}
+
+#minus{
+    position: absolute;
+    top: 0;
+    right: 0;
+    stroke: var(--blue);
+}
+
+
 @media (max-height: 650px) {
-    #use-cases{
+    .use-cases{
         padding: 5rem 5rem 5rem 5rem;
     }
     #healthcare .canvas-container{
@@ -126,37 +317,37 @@
 
 
 @media only screen and (min-width: 640px) and (max-width: 767px) {
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    #use-cases{
+    .use-cases{
         padding: 5rem 5rem 5rem 5rem;
     }
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    #use-cases{
+    .use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-    #use-cases{
+    .use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -166,10 +357,10 @@
 }
 
 @media only screen and (min-width: 1536px) {
-    #use-cases{
+    .use-cases{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }

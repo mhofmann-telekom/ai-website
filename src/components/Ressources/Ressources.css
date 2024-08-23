@@ -21,6 +21,7 @@
 }
 
 #ressources .card{
+    width: 100%;
     padding: 2rem;
     background-color: var(--dark-950);
     color: var(--dark-300);

@@ -223,7 +223,7 @@
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
-        grid-template-columns: 1fr 100px 1fr;
+        grid-template-columns: 1fr;
     }
     .box-wrapper{
         flex-direction: row;
@@ -238,7 +238,7 @@
         width: max-content;
     }
     .headline-wrapper{
-        padding: 5rem 0 5rem 5rem;
+        padding: 5rem 5rem 5rem 5rem;
         margin-top: 0;
         width: 100%;
     }
