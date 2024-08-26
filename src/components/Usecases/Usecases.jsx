@@ -96,9 +96,11 @@ function Usecases() {
         </div>
       </div>
       <div className="use-cases background-light">
-        <div id="speakpeak">
-          <PlusIcon id="plus" strokeColor='var(--blue)' strokeWidth={.1}></PlusIcon>
+        <div id="icon-wrapper">
+          <PlusIcon height={400} width={400} strokeColor='var(--blue)' strokeWidth={.15}></PlusIcon>
           <div id="minus"></div>
+        </div>
+        <div id="speakpeak">
           <div className="card-container">
             <h3 className="headline-h3 uppercase">SpeakPeak</h3>
             <p className='headline-subtext blue'>Sentiment Analysis</p>

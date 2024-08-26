@@ -6,6 +6,7 @@
     gap: 5rem;
     padding: 2rem;
     color: black;
+    position: relative;
 }
 
 .use-cases.background-dark{
@@ -215,6 +216,29 @@
 
 
 /* speakpeak */
+.use-cases:has(#speakpeak){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0;
+}
+
+#icon-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 20%;
+}
+
+#minus{
+    width: 265px;
+    height: 2.2rem;
+    background-color: transparent;
+    border-radius: 1000px;
+    border: 2.5px solid var(--blue);
+    margin: auto 0;
+}
+
 #speakpeak{
     position: relative;
     width: 80%;
@@ -248,7 +272,7 @@
     color: var(--dark-700);
 }
 
-#speakpeak .card-container:first-of-type{
+#speakpeak .card-container:nth-of-type(1){
     border-bottom: 1px solid var(--dark-850);
     border-right: 1px solid var(--dark-850);
 }
@@ -262,6 +286,7 @@
 #speakpeak .use-case-image > img{
     width: 100%;
     object-fit: cover;
+    border-radius: 2px;
 }
 
 #speakpeak .use-case-image{
@@ -285,22 +310,6 @@
     background-size: 10px 10px;
     background-position: 0 50%;   
 }
-
-#speakpeak svg:first-child{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%) scale(20);
-    z-index: 0;
-}
-
-#minus{
-    position: absolute;
-    top: 0;
-    right: 0;
-    stroke: var(--blue);
-}
-
 
 @media (max-height: 650px) {
     .use-cases{
