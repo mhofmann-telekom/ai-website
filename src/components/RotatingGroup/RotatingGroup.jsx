@@ -20,7 +20,7 @@ export default function RotatingGroup({curves, trigger, fromYRotation=0, toYRota
           scrollTrigger: {
             trigger: trigger,
             start: 'top bottom',
-            scrub: true
+            scrub: true,
           },
           duration: 1,
         }

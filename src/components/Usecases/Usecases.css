@@ -1,5 +1,5 @@
 
-.use-cases{
+.use-case{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,17 +9,17 @@
     position: relative;
 }
 
-.use-cases.background-dark{
+.use-case.background-dark{
     background-color: var(--dark-300);
     color: white;
 }
 
-.use-cases.background-light{
+.use-case.background-light{
     background-color: var(--dark-950);
     color: var(--dark-300);
 }
 
-.use-cases .headline-subtext{
+.use-case .headline-subtext{
     color: var(--dark-850);
 }
 
@@ -84,7 +84,7 @@
 }
 
 #dentascan .card-headline{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "TeleNeo Medium";
 }
 
@@ -159,9 +159,9 @@
 }
 
 #orion .card-headline{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "TeleNeo Bold";
-    color: var(--dark-600);
+    color: var(--dark-300);
 }
 
 #orion .card-text{
@@ -202,7 +202,7 @@
 }
 
 .headline-subtext.blue{
-    font-size: .9rem;
+    font-size: 1rem;
     color: var(--blue);
     font-family: "TeleNeo Bold";
     text-transform: capitalize;
@@ -227,7 +227,7 @@
 
 
 /* speakpeak */
-.use-cases:has(#speakpeak){
+.use-case:has(#speakpeak){
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -271,9 +271,9 @@
 }
 
 #speakpeak .card-headline{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "TeleNeo Bold";
-    color: var(--dark-600);
+    color: var(--dark-300);
 }
 
 #speakpeak .card-text{
@@ -321,8 +321,93 @@
     background-position: 0 50%;   
 }
 
+/* SoleMetrics */
+#soleMetrics{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#soleMetrics .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--dark-600);
+    border-right: 0;
+}
+
+#soleMetrics .card-container:first-child{
+    border-radius: 10px 0 0 10px;
+}
+
+#soleMetrics .card-container:last-child{
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid var(--dark-600);
+}
+
+#soleMetrics .card-headline{
+    font-size: 1.1rem;
+    font-family: "TeleNeo Medium";
+}
+
+#soleMetrics .card-text{
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-800);
+}
+
+
+/* emailMaven */
+
+#emailMaven {
+    width: 100%;
+    position: relative;
+}
+
+#emailMaven #content-wrapper {
+    width: 75%;
+    border-radius: 10px;
+    border: 1px solid var(--dark-600);
+}
+
+#emailMaven #email-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+#emailMaven .email-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#emailMaven .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+#emailMaven .card-headline{
+    font-size: 1.1rem;
+    font-family: "TeleNeo Medium";
+}
+
+#emailMaven .card-text{
+    font-size: 1rem;
+    font-family: "TeleNeo Regular";
+    color: var(--dark-800);
+}
+
 @media (max-height: 650px) {
-    .use-cases{
+    .use-case{
         padding: 5rem 5rem 5rem 5rem;
     }
     #healthcare .canvas-container{
@@ -343,7 +428,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .use-cases{
+    .use-case{
         padding: 5rem 5rem 5rem 5rem;
     }
     #dentascan, #orion, #speakpeak{
@@ -353,7 +438,7 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    .use-cases{
+    .use-case{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     #dentascan, #orion, #speakpeak{
@@ -363,7 +448,7 @@
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-    .use-cases{
+    .use-case{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     #dentascan, #orion, #speakpeak{
@@ -376,7 +461,7 @@
 }
 
 @media only screen and (min-width: 1536px) {
-    .use-cases{
+    .use-case{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
     }
     #dentascan, #orion, #speakpeak{

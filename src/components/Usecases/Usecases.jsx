@@ -30,6 +30,7 @@ function Usecases() {
   const plusRef = useRef(null);
   const minusRef = useRef(null);
   const micRef = useRef(null);
+  const emailRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(plusRef.current, 
@@ -44,8 +45,20 @@ function Usecases() {
       }
     );
 
+    gsap.fromTo(emailRef.current, 
+      { x: '-30%'}, 
+      { 
+        x: '0%',
+        scrollTrigger: {
+          trigger: '#emailMaven',
+          start: 'top bottom',
+          scrub: true
+        }
+      }
+    );
+
     gsap.fromTo(minusRef.current, 
-      { x: '20%'},
+      { x: '0%'},
       { 
         x: '0%',
         scrollTrigger: {
@@ -61,7 +74,7 @@ function Usecases() {
       { 
         x: '0',
         scrollTrigger: {
-          trigger: '.use-cases:has(#orion)',
+          trigger: '.use-case:has(#orion)',
           start: 'top bottom',
           scrub: true
         }
@@ -71,7 +84,7 @@ function Usecases() {
 
   return (
     <>
-      <div className="use-cases background-dark">
+      <div className="use-case background-dark">
         <div>
           <h2 className="headline-h2">Our use cases and products</h2>
           <p className="headline-subtext margin-y-2rem">In this section, we introduce you our use cases for artificial intelligence in healthcare, insurance and manufacturing.</p>
@@ -112,7 +125,7 @@ function Usecases() {
           </div>
         </div>
       </div>
-      <div className="use-cases background-light">
+      <div className="use-case background-light">
         <img id="mic-icon" src={Mic} ref={micRef}></img>
         <div id="orion">
           <h4 className="branch-text"></h4>
@@ -137,9 +150,8 @@ function Usecases() {
           </div>
         </div>
       </div>
-      <div className="use-cases background-light">
+      <div className="use-case background-light">
         <div id="icon-wrapper">
-          {/* <PlusIcon ref={plusRef} height={400} width={400} strokeColor='var(--blue)' strokeWidth={.15} /> */}
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -174,6 +186,55 @@ function Usecases() {
           <div className="card-container">
             <p className="card-headline">Benefits:</p>
             <p className="card-text margin-top-1rem">SpeakPeak enables more accurate and effective customer interactions, improves user experience, and supports customer retention through targeted and emotion-based responses.</p>
+          </div>
+        </div>
+      </div>
+      <div className="use-case background-dark">
+        <div id="soleMetrics">
+          <div className="card-container">
+            <h3 className="headline-h3 uppercase">SoleMetrics</h3>
+            <p className='headline-subtext blue'>Video Analysis</p>
+            <svg style={{transform: "translate(-30px,15px)"}} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="150" height="150"><path style={{fill: "none", stroke: "var(--dark-600)", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: ".1"}} d="M17,12,5,21V3Z"></path></svg>
+          </div>
+          <div className="card-container">
+            <p className="card-headline">Business Problem:</p>
+            <p className="card-text margin-top-1rem">Businesses struggle to extract actionable insights from vast amounts of video data using traditional methods. This inefficiency can lead to missed security threats, operational issues, and delays in decision-making.</p>
+          </div>
+          <div className="card-container">
+            <p className="card-headline">Solution:</p>
+            <p className="card-text margin-top-1rem">SoleMetrics offers advanced video analytics that uses machine learning to quickly and accurately analyze video data. This automated process enhances security, optimizes operations, and supports better decision-making.</p>
+          </div>
+          <div className="card-container">
+            <p className="card-headline">Benefits:</p>
+            <p className="card-text margin-top-1rem">SoleMetrics' video analytics improve security with real-time threat detection, boost operational efficiency by automating video processing, and support informed decisions with actionable insights. This results in cost savings and better resource allocation.</p>
+          </div>
+        </div>
+        <div id="emailMaven">
+          <svg id="email-icon" ref={emailRef} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20,19H4a1,1,0,0,1-1-1V6A1,1,0,0,1,4,5H20a1,1,0,0,1,1,1V18A1,1,0,0,1,20,19ZM3.68,5.45l7.7,6.06a1,1,0,0,0,1.24,0l7.7-6.06"
+              style={{ fill: "none", stroke: "var(--dark-600)", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: ".05" }}
+            />
+          </svg>
+          <div id="content-wrapper">
+            <div className="card-container">
+              <h3 className="headline-h3 uppercase">EmailMaven</h3>
+              <p className='headline-subtext blue'>Email Triaging</p>
+            </div>
+            <div className="email-body">
+              <div className="card-container">
+                <p className="card-headline">Business Problem:</p>
+                <p className="card-text margin-top-1rem">Managing high volumes of emails can overwhelm individuals and teams, leading to missed important messages, delayed responses, and reduced productivity.</p>
+              </div>
+              <div className="card-container">
+                <p className="card-headline">Solution:</p>
+                <p className="card-text margin-top-1rem">EmailMaven offers intelligent email triaging that automates the sorting and prioritization of incoming emails. It quickly categorizes emails by relevance, urgency, and importance, enabling users to efficiently manage their inboxes.</p>
+              </div>
+              <div className="card-container">
+                <p className="card-headline">Benefits:</p>
+                <p className="card-text margin-top-1rem">EmailMaven enhances productivity by ensuring that critical emails are addressed promptly, reduces the risk of overlooking important communications, and minimizes time spent on less urgent emails, leading to better inbox management and reduced email overload.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
