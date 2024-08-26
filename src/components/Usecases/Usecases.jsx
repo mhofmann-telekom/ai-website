@@ -222,15 +222,15 @@ function Usecases() {
               <p className='headline-subtext blue'>Email Triaging</p>
             </div>
             <div className="email-body">
-              <div className="card-container">
+              <div className="card-container border-top-grey">
                 <p className="card-headline">Business Problem:</p>
                 <p className="card-text margin-top-1rem">Managing high volumes of emails can overwhelm individuals and teams, leading to missed important messages, delayed responses, and reduced productivity.</p>
               </div>
-              <div className="card-container">
+              <div className="card-container border-top-grey">
                 <p className="card-headline">Solution:</p>
                 <p className="card-text margin-top-1rem">EmailMaven offers intelligent email triaging that automates the sorting and prioritization of incoming emails. It quickly categorizes emails by relevance, urgency, and importance, enabling users to efficiently manage their inboxes.</p>
               </div>
-              <div className="card-container">
+              <div className="card-container border-top-grey">
                 <p className="card-headline">Benefits:</p>
                 <p className="card-text margin-top-1rem">EmailMaven enhances productivity by ensuring that critical emails are addressed promptly, reduces the risk of overlooking important communications, and minimizes time spent on less urgent emails, leading to better inbox management and reduced email overload.</p>
               </div>
