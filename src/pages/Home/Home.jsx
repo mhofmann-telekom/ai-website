@@ -7,6 +7,7 @@ import gsap from 'gsap';
 
 import './Home.css';
 
+import RotatingGroup from '../../components/RotatingGroup/RotatingGroup';
 import Tubes from './../../components/Tubes/Tubes';
 import Particles from './../../components/Particles/Particles';
 import Sidebar from './../../components/Sidebar/Sidebar';
@@ -72,7 +73,7 @@ function App() {
   return (
     <>
       <Sidebar />
-      <div className="introduction-wrapper">
+      <div id="introduction-wrapper">
         <div className="headline-wrapper">
           <h1 className="headline-h1">Let's power higher performance...</h1>
           <p className="headline-text">through the use of artificial intelligence.</p>
@@ -127,8 +128,7 @@ function App() {
             >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} intensity={1} />
-              <Tubes curves={brainCurves} />
-              <Particles curves={brainCurves} />
+              <RotatingGroup curves={brainCurves} trigger="#introduction-wrapper" fromYRotation={0} toYRotation={7.5}/>
               <OrbitControls enableZoom={false} />
             </Canvas>
           </div>

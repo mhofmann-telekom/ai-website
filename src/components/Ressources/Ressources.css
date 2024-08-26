@@ -77,33 +77,21 @@
 
 .card-shape #box-shape{
     position: absolute;
-    top: -70px;
-    right: -400px;
-    transform: rotate(-55deg);
-    height: 490px;
+    top: 0;
+    right: -80px;
+    height: 100%;
     aspect-ratio: 1/1;
+    transform: scale(1.1) rotate(30deg);
     background-color: var(--magenta);
-    border-radius: 15px;
+    border-radius: 30px;
 }
 
 .card-shape #octagon-shape{
     position: absolute;
     right: 0;
     top: 0;
-    right: -120px;
     height: 100%;
-    aspect-ratio: 1/1;
-    background-color: var(--magenta);
-    border-radius: 15px;
-
-    --o:calc(50%*tan(-22.5deg));
-    clip-path: polygon(
-        var(--o) 50%,
-        50% var(--o),
-        calc(100% - var(--o)) 50%,
-        50% calc(100% - var(--o))
-    );
-    background: var(--magenta);
+    transform: scale(1.5) translateX(60px);
 }
 
 #timeline{

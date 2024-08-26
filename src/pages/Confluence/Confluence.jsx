@@ -17,7 +17,8 @@ const Confluence = () => {
                 <div class="headline-wrapper">
                     <h1 class="headline-h1">Welcome to Our Team's Confluence Page</h1>
                     <p class="headline-subtext">
-                        This page offers an overview of our team's current and past projects, highlighting key milestones and successes. 
+                        This page offers an overview of our team's current and past projects, highlighting key milestones and successes.
+                        <br/>
                         It's a central resource for team members and stakeholders to stay updated on our work. 
                         Explore our achievements and ongoing projects here.
                     </p>

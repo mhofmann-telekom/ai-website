@@ -1,5 +1,5 @@
 
-.introduction-wrapper {
+#introduction-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
@@ -66,7 +66,7 @@
     fill: var(--dark-300);
 }
 
-.introduction-wrapper .canvas-container{
+#introduction-wrapper .canvas-container{
     position: absolute;
     right: 0;
     top: 0;
@@ -221,7 +221,7 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    .introduction-wrapper{
+    #introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr;
     }
@@ -245,7 +245,7 @@
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-    .introduction-wrapper{
+    #introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr 100px 1fr;
     }
@@ -272,7 +272,7 @@
 }
 
 @media only screen and (min-width: 1536px) {
-    .introduction-wrapper{
+    #introduction-wrapper{
         padding: 0rem 0rem 0rem 260px;
         grid-template-columns: 1fr 100px 1fr;
     }
