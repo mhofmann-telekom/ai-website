@@ -58,7 +58,7 @@ function Usecases() {
     );
 
     gsap.fromTo(minusRef.current, 
-      { x: '0%'},
+      { x: '30%'},
       { 
         x: '0%',
         scrollTrigger: {
