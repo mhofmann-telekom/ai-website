@@ -55,6 +55,7 @@
 
 .card-content{
     width: 65%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -67,35 +68,38 @@
 .card-shape #circle-shape{
     position: absolute;
     top: -70px;
-    right: -300px;
+    right: -320px;
     transform: rotate(-40deg);
     height: 490px;
     aspect-ratio: 1/1;
     background-color: var(--magenta);
     border-radius: 50%;
+    display: none;
 }
 
 .card-shape #box-shape{
     position: absolute;
     top: 0;
-    right: -80px;
+    right: -120px;
     height: 100%;
     aspect-ratio: 1/1;
     transform: scale(1.1) rotate(30deg);
     background-color: var(--magenta);
     border-radius: 30px;
+    display: none;
 }
 
 .card-shape #octagon-shape{
     position: absolute;
-    right: 0;
+    right: -30px;
     top: 0;
     height: 100%;
     transform: scale(1.5) translateX(60px);
+    display: none;
 }
 
 #timeline{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -174,12 +178,24 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Add specific styles if needed */
+    .card-content{
+        width: 65%;
+    }
+    .card-shape #circle-shape, .card-shape #box-shape, .card-shape #octagon-shape{
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     #ressources{
         padding: 5rem 5rem 5rem calc(260px + 5rem);
+    }
+
+    .card-content{
+        width: 65%;
+    }
+    .card-shape #circle-shape, .card-shape #box-shape, .card-shape #octagon-shape{
+        display: block;
     }
 }
 
@@ -187,10 +203,28 @@
     #ressources{
         padding: 5rem 5rem 4rem calc(260px + 5rem);
     }
+    .card-content{
+        width: 65%;
+    }
+    .card-shape #circle-shape, .card-shape #box-shape, .card-shape #octagon-shape{
+        display: block;
+    }
+    #timeline{
+        display: flex;
+    }
 }
 
 @media only screen and (min-width: 1536px) {
     #ressources{
         padding: 5rem 5rem 4rem calc(260px + 5rem);
+    }
+    .card-content{
+        width: 65%;
+    }
+    .card-shape #circle-shape, .card-shape #box-shape, .card-shape #octagon-shape{
+        display: block;
+    }
+    #timeline{
+        display: flex;
     }
 }

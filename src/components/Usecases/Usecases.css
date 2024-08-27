@@ -50,7 +50,7 @@
 
 #dentascan .branch-text{
     position: absolute;
-    transform: rotate(-90deg) translate(-26.85px, -175%);
+    transform: translate(-.7px, -100%);
     top: 0;
     left: 0;
     font-size: .9rem;
@@ -74,13 +74,12 @@
 
 #dentascan .card-container:first-of-type{
     border-bottom: 1px solid var(--dark-600);
-    border-right: 1px solid var(--dark-600);
 }
 #dentascan .card-container:nth-of-type(2){
     border-bottom: 1px solid var(--dark-600);
 }
 #dentascan .card-container:nth-of-type(3){
-    border-right: 1px solid var(--dark-600);
+    border-bottom: 1px solid var(--dark-600);
 }
 
 #dentascan .card-headline{
@@ -126,7 +125,7 @@
 /* orion */
 #orion{
     position: relative;
-    width: 80%;
+    width: 100%;
     background-color: var(--dark-950);
     border-radius: 10px 0 10px 10px;
     border: 1px solid var(--dark-850);
@@ -147,6 +146,7 @@
     top: 0;
     right: 0;
     transform: translate(100%);
+    display: none;
 }
 
 #orion .card-container{
@@ -222,7 +222,7 @@
     background-image: url('data:image/svg+xml;utf8,<svg data-icon-name="information-circle" data-style="line" icon_origin_id="20497" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="information-circle" class="icon line" width="24" height="24"><line style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" y2="8" x2="11.95" y1="8" x1="12.05" id="primary-upstroke"></line><path style="fill: none; stroke: %23bcbcbe; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;" d="M3,12a9,9,0,0,1,9-9h0a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9Zm9,1v3" id="primary"></path></svg>');
     background-repeat: no-repeat;
     background-size: 10px 10px;
-    background-position: 0 50%;   
+    background-position: 0 50%;
 }
 
 
@@ -239,6 +239,7 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 20%;
+    display: none;
 }
 
 #minus{
@@ -251,7 +252,7 @@
 
 #speakpeak{
     position: relative;
-    width: 80%;
+    width: 100%;
     background-color: var(--dark-950);
     border-radius: 10px;
     border: 1px solid var(--dark-850);
@@ -352,6 +353,7 @@
     right: 300px;
     transform: translate(0, -50%) scale(20);
     z-index: 0;
+    display: none;
 }
 
 #mariana .header{
@@ -363,6 +365,7 @@
     justify-content: space-between;
     color: var(--dark-950);
     padding: 0 2rem;
+    gap: 2rem;
 }
 
 #mariana .header > h1{
@@ -406,6 +409,8 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #mariana .card{
@@ -433,9 +438,9 @@
 }
 
 #mariana .chatbox{
-    width: 40%;
+    width: 80%;
     padding: .5rem 1rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -451,9 +456,11 @@
 /* SoleMetrics */
 #soleMetrics{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     background-color: var(--dark-500);
+    border-radius: 10px;
+    border: 1px solid var(--dark-600);
 }
 
 #soleMetrics .card-container{
@@ -463,18 +470,18 @@
     width: 100%;
     height: 100%;
     padding: 2rem;
-    border: 1px solid var(--dark-600);
-    border-right: 0;
+    border: 0;
 }
 
-#soleMetrics .card-container:first-child{
-    border-radius: 10px 0 0 10px;
+#soleMetrics .card-container:nth-child(2){
+    border-top: 1px solid var(--dark-600);
+    border-bottom: 1px solid var(--dark-600);
 }
 
-#soleMetrics .card-container:last-child{
-    border-radius: 0 10px 10px 0;
-    border-right: 1px solid var(--dark-600);
+#soleMetrics .card-container:nth-child(3){
+    border-bottom: 1px solid var(--dark-600);
 }
+
 
 #soleMetrics .card-headline{
     font-size: 1.1rem;
@@ -496,11 +503,11 @@
 }
 
 #emailMaven #content-wrapper {
-    width: 75%;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid var(--dark-600);
     background-color: var(--dark-500);
-    z-index: 20;
+    z-index: 10;
     position: relative;
 }
 
@@ -510,6 +517,7 @@
     top: 0;
     height: 100%;
     z-index: 0;
+    display: none;
 }
 
 #emailMaven #key-icon{
@@ -521,8 +529,9 @@
 
 #emailMaven .email-body{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    width: 100%;
 }
 
 #emailMaven .card-container{
@@ -556,7 +565,7 @@
     #healthcare .canvas-container{
         display: none;
     }
-    #dentascan{
+    #dentascan, #orion, #speakpeak{
         width: 100%;
     }
 }
@@ -568,6 +577,37 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    #dentascan .card-container:first-of-type{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(2){
+        border-bottom: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
+    
+    #orion{
+        border-radius: 10px;
+    }
+
+    #soleMetrics, #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #soleMetrics .card-container:first-child{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #soleMetrics .card-container:nth-child(2){
+        border-top: 0;
+    }
+    #soleMetrics .card-container:nth-child(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -577,6 +617,38 @@
     #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+    #dentascan .branch-text{
+        position: absolute;
+        transform: rotate(-90deg) translate(-26.85px, -175%);
+    }
+    #dentascan .card-container:first-of-type{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(2){
+        border-bottom: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
+    #orion{
+        border-radius: 10px;
+    }
+    #soleMetrics, #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr;
+    }
+    #soleMetrics .card-container:first-child{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #soleMetrics .card-container:nth-child(2){
+        border-top: 0;
+    }
+    #soleMetrics .card-container:nth-child(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
     }
 }
 
@@ -588,6 +660,43 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    #dentascan .card-container:first-of-type{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(2){
+        border-bottom: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
+    #mariana .chatbox{
+        width: 40%;
+    }
+    #orion{
+        border-radius: 10px;
+    }
+    #soleMetrics{
+        grid-template-columns: 1fr 1fr;
+    }
+    #soleMetrics .card-container:first-child{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #soleMetrics .card-container:nth-child(2){
+        border-top: 0;
+    }
+    #soleMetrics .card-container:nth-child(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
+    #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #emailMaven #content-wrapper {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
@@ -598,8 +707,54 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    #dentascan .card-container:first-of-type{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(2){
+        border-bottom: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
+    #orion, #speakpeak{
+        width: 80%;
+    }
+    #orion .branch-text{
+        display: block;
+    }
+    #icon-wrapper{
+        display: flex;
+    }
     #healthcare .canvas-container{
         display: block;
+    }
+    #mariana .card-wrapper{
+        flex-direction: row;
+    }
+    #mariana .chatbox{
+        width: 40%;
+    }
+    #mariana-background-icon{
+        display: block;
+    }
+    #emailMaven #email-icon{
+        display: block;
+    }
+    #soleMetrics{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #soleMetrics .card-container:first-child, #soleMetrics .card-container:nth-child(2), #soleMetrics .card-container:nth-child(3){
+        border-right: 1px solid var(--dark-600);
+        border-top: 0;
+        border-bottom: 0;
+    }
+    #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #emailMaven #content-wrapper {
+        width: 75%;
     }
 }
 
@@ -611,7 +766,51 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    #dentascan .card-container:first-of-type{
+        border-bottom: 1px solid var(--dark-600);
+        border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(2){
+        border-bottom: 1px solid var(--dark-600);
+    }
+    #dentascan .card-container:nth-of-type(3){
+        border-right: 1px solid var(--dark-600);
+        border-bottom: 0;
+    }
     #healthcare .canvas-container{
+        display: block;
+    }
+    #orion, #speakpeak{
+        width: 80%;
+    }
+    #orion .branch-text{
+        display: block;
+    }
+    #icon-wrapper{
+        display: flex;
+    }
+    #mariana .chatbox{
+        width: 40%;
+    }
+    #mariana-background-icon{
+        display: block;
+    }
+
+    #soleMetrics, #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #soleMetrics .card-container:first-child, #soleMetrics .card-container:nth-child(2), #soleMetrics .card-container:nth-child(3){
+        border-right: 1px solid var(--dark-600);
+        border-top: 0;
+        border-bottom: 0;
+    }
+    #emailMaven .email-body{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #emailMaven #content-wrapper {
+        width: 75%;
+    }
+    #emailMaven #email-icon{
         display: block;
     }
 }
