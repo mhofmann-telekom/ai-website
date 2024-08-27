@@ -382,6 +382,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem;
 }
 
 #mariana .body > svg{
@@ -660,6 +661,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    #dentascan .branch-text{
+        position: absolute;
+        transform: rotate(-90deg) translate(-26.85px, -175%);
+    }
     #dentascan .card-container:first-of-type{
         border-bottom: 1px solid var(--dark-600);
         border-right: 1px solid var(--dark-600);
@@ -706,6 +711,10 @@
     #dentascan, #orion, #speakpeak{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+    #dentascan .branch-text{
+        position: absolute;
+        transform: rotate(-90deg) translate(-26.85px, -175%);
     }
     #dentascan .card-container:first-of-type{
         border-bottom: 1px solid var(--dark-600);
@@ -769,6 +778,10 @@
     #dentascan .card-container:first-of-type{
         border-bottom: 1px solid var(--dark-600);
         border-right: 1px solid var(--dark-600);
+    }
+    #dentascan .branch-text{
+        position: absolute;
+        transform: rotate(-90deg) translate(-26.85px, -175%);
     }
     #dentascan .card-container:nth-of-type(2){
         border-bottom: 1px solid var(--dark-600);
