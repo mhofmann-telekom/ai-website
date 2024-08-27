@@ -31,6 +31,7 @@ function Usecases() {
   const minusRef = useRef(null);
   const micRef = useRef(null);
   const emailRef = useRef(null);
+  const sendRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(plusRef.current, 
@@ -39,6 +40,18 @@ function Usecases() {
         x: '20%',
         scrollTrigger: {
           trigger: '#icon-wrapper',
+          start: 'top bottom',
+          scrub: true
+        }
+      }
+    );
+
+    gsap.fromTo(sendRef.current, 
+      { x: '-200px'}, 
+      { 
+        x: '0%',
+        scrollTrigger: {
+          trigger: '#mariana',
           start: 'top bottom',
           scrub: true
         }
@@ -189,6 +202,68 @@ function Usecases() {
           </div>
         </div>
       </div>
+      <div className="use-case background-light">
+        <svg
+          id="mariana-background-icon"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          ref={sendRef}
+        >
+          <path
+            d="M5.44,4.15l14.65,7a1,1,0,0,1,0,1.8l-14.65,7A1,1,0,0,1,4.1,18.54l2.72-6.13a1.06,1.06,0,0,0,0-.82L4.1,5.46A1,1,0,0,1,5.44,4.15ZM7,12h4"
+            fill="none"
+            stroke="var(--blue)"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth=".18"
+          />
+        </svg>
+        <div id="mariana">
+          <div className="header">
+            <h1>Mariana</h1>
+            <span>An AI-powered enterprise level search engine</span>
+          </div>
+          <div className="body">
+            <svg xmlns="http://www.w3.org/2000/svg" width="5rem" height="5rem" viewBox="0 0 28 28"><path fill="var(--blue)" d="M10.06 18.701a1.628 1.628 0 0 0 2.43-.676l.77-2.34a3.82 3.82 0 0 1 2.416-2.418l2.238-.727a1.6 1.6 0 0 0 .786-.595a1.62 1.62 0 0 0-.849-2.489l-2.215-.72a3.82 3.82 0 0 1-2.42-2.414l-.727-2.237a1.62 1.62 0 0 0-.594-.785a1.655 1.655 0 0 0-1.879 0a1.63 1.63 0 0 0-.6.8L8.68 6.365a3.82 3.82 0 0 1-2.359 2.37l-2.24.726a1.626 1.626 0 0 0 .02 3.073l2.216.72a3.86 3.86 0 0 1 1.816 1.286c.266.343.471.728.606 1.14l.728 2.234c.112.318.32.593.595.787m9.744 6.08a1.2 1.2 0 0 0 .696.22a1.2 1.2 0 0 0 .692-.217a1.2 1.2 0 0 0 .446-.6l.372-1.143a1.61 1.61 0 0 1 1.017-1.02l1.166-.378A1.21 1.21 0 0 0 25 20.505a1.2 1.2 0 0 0-.844-1.146l-1.144-.37a1.61 1.61 0 0 1-1.02-1.018l-.38-1.163a1.2 1.2 0 0 0-2.274.016l-.374 1.146a1.61 1.61 0 0 1-.993 1.017l-1.166.378a1.21 1.21 0 0 0-.807 1.139a1.2 1.2 0 0 0 .823 1.138l1.144.372a1.6 1.6 0 0 1 1.02 1.023l.379 1.163a1.2 1.2 0 0 0 .44.582"></path></svg>
+            <h1>Chat with your own data</h1>
+            <h2>Ask anything or try an example</h2>
+            <div className="card-wrapper">
+              <div className='card'>
+                <h3>Business Problem</h3>
+                <p>Finding the right information quickly is challenging in enterprises due to overwhelming amounts of data. Traditional search solutions often fail to provide the necessary context, leading to wasted time and reduced productivity.</p>
+              </div>
+              <div className='card'>
+                <h3>Solution</h3>
+                <p>Mariana enhances enterprise search by using large language models like GPT. It not only retrieves relevant documents but also generates summaries, highlights, and insights, providing employees with the exact context and answers they need.</p>
+              </div>
+              <div className='card'>
+                <h3>Benefits</h3>
+                <p>Mariana saves employees time by delivering context-rich search results, enabling faster decision-making and boosting productivity. It optimizes the use of enterprise knowledge, enhancing overall efficiency.</p>
+              </div>
+            </div>
+          </div>
+          <div className="chatbox">
+            <span>Type a new question ...</span>
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M5.44,4.15l14.65,7a1,1,0,0,1,0,1.8l-14.65,7A1,1,0,0,1,4.1,18.54l2.72-6.13a1.06,1.06,0,0,0,0-.82L4.1,5.46A1,1,0,0,1,5.44,4.15ZM7,12h4"
+                fill="var(--blue)"
+                stroke="var(--dark-950)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
       <div className="use-case background-dark">
         <div id="soleMetrics">
           <div className="card-container">
@@ -217,6 +292,22 @@ function Usecases() {
             />
           </svg>
           <div id="content-wrapper">
+            {/* <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              id="key-icon"
+              width="24"
+              height="24"
+              style={{
+                fill: "none",
+                stroke: "var(--dark-600)"
+              }}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth=".05"
+            >
+              <path d="M9 12H21m-1 0V10m-4 2V10M6 9a3 3 0 1 0 3 3A3 3 0 0 0 6 9Z" />
+            </svg> */}
             <div className="card-container">
               <h3 className="headline-h3 uppercase">EmailMaven</h3>
               <p className='headline-subtext blue'>Email Triaging</p>
