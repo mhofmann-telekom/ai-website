@@ -32,6 +32,12 @@
   width: 100%;
 }
 
+.slider img{
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;

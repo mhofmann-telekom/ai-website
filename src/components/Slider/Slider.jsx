@@ -1,51 +1,74 @@
 
 import "./Slider.css"
+import Allianz from "./../../assets/img/allianz.png"
+import Apl from "./../../assets/img/apl.jpg"
+import Fongs from "./../../assets/img/fongs.png"
+import Nus from "./../../assets/img/nus.jpg"
+import Sportshub from "./../../assets/img/sportshub.webp"
 
 function Slider() {
   return (
     <div className="slider">
         <div className="slide-track">
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                <img src={Allianz} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                <img src={Fongs} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                <img src={Nus} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                <img src={Sportshub} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                <img src={Apl} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                <img src={Allianz} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                <img src={Fongs} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                <img src={Nus} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                <img src={Sportshub} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                <img src={Apl} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                <img src={Allianz} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                <img src={Fongs} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                <img src={Nus} alt="" />
             </div>
             <div className="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                <img src={Sportshub} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Apl} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Allianz} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Fongs} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Nus} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Sportshub} alt="" />
+            </div>
+            <div className="slide">
+                <img src={Apl} alt="" />
             </div>
         </div>
     </div>
