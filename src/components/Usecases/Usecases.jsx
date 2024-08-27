@@ -97,7 +97,7 @@ function Usecases() {
 
   return (
     <>
-      <div className="use-case background-dark">
+      <div id="use-cases" className="use-case background-dark">
         <div>
           <h2 className="headline-h2">Our use cases and products</h2>
           <p className="headline-subtext margin-y-2rem">In this section, we introduce you our use cases for artificial intelligence in healthcare, insurance and manufacturing.</p>
