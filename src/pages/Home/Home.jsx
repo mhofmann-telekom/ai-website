@@ -8,8 +8,6 @@ import gsap from 'gsap';
 import './Home.css';
 
 import RotatingGroup from '../../components/RotatingGroup/RotatingGroup';
-import Tubes from './../../components/Tubes/Tubes';
-import Particles from './../../components/Particles/Particles';
 import Sidebar from './../../components/Sidebar/Sidebar';
 import Arrow from "./../../assets/icons/arrow-right.svg";
 import Contact from './../../components/Contact/Contact';
