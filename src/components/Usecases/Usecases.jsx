@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { data } from './../../utils/data';
 import * as THREE from 'three';
@@ -11,7 +11,7 @@ import RotatingGroup from '../RotatingGroup/RotatingGroup';
 import Mic from "./../../assets/icons/mic.svg";
 import Orion from './../../assets/img/orion.png';
 import Speakpeak from './../../assets/img/speakpeak.png';
-import DentaScan from './../../assets/img/dentascan.png';
+import Dentascan from './../../assets/img/dentascan.png';
 import "./Usecases.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -124,7 +124,7 @@ function Usecases() {
             </div>
             <div className="card-container">
               <div className="use-case-image" data-imagetext="oral x-ray">
-                <img src={DentaScan}/>
+                <img src={Dentascan}/>
               </div>
             </div>
             <div className="card-container">
