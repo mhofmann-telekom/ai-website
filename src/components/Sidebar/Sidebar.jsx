@@ -1,6 +1,6 @@
 import './Sidebar.css'
 import logo from "./../../assets/icons/logo-t-systems-white.svg";
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { useRef, useState } from 'react';
 import MenuIcon from '../../assets/icons/Menu-Icon';
 import ConfluenceIcon from '../../assets/icons/Confluence-Icon';
@@ -28,26 +28,26 @@ export default function Sidebar(){
             <ConfluenceIcon></ConfluenceIcon>
             <span>Confluence portal</span>
           </Link>
-          <a href="/#use-cases" className="nav-item">
+          <Link to="/#use-cases" className="nav-item">
             <SettingsIcon fillColor='white' strokeColor='var(--magenta)'></SettingsIcon>
             <span>Use cases</span>
-          </a>
+          </Link>
           <Link to="/architecture" className="nav-item">
             <ArchitectureIcon></ArchitectureIcon>
             <span>Architecture</span>
           </Link>
-          <a href="/#ressources" className="nav-item">
+          <Link to="/#ressources" className="nav-item">
             <RessourcesIcon></RessourcesIcon>
             <span>Ressources</span>
-          </a>
-          <a href="/#expertise" className="nav-item">
+          </Link>
+          <Link to="/#expertise" className="nav-item">
             <ExpertiseIcon></ExpertiseIcon>
             <span>Our expertise</span>
-          </a>
-          <a href="/#contact" className="nav-item">
+          </Link>
+          <Link to="/#contact" className="nav-item">
             <ContactIcon></ContactIcon>
             <span>Contact</span>
-          </a>
+          </Link>
         </div>
         <p className="bottom-text">Located in Singapore</p>
       </div>
@@ -71,26 +71,26 @@ export default function Sidebar(){
               <ConfluenceIcon fillColor="var(--dark-500)"></ConfluenceIcon>
               <span>Confluence portal</span>
             </Link>
-            <a href="/#use-cases" className="nav-item">
+            <Link to="/#use-cases" className="nav-item">
               <SettingsIcon></SettingsIcon>
               <span>Use cases</span>
-            </a>
+            </Link>
             <Link to="/architecture" className="nav-item">
               <ArchitectureIcon fillColor="var(--dark-500)"></ArchitectureIcon>
               <span>Architecture</span>
             </Link>
-            <a href="/#ressources" className="nav-item">
+            <Link to="/#ressources" className="nav-item">
               <RessourcesIcon fillColorPrimary='var(--dark-500)' fillColorSecondary='var(--dark-950)'></RessourcesIcon>
               <span>Ressources</span>
-            </a>
-            <a href="/#expertise" className="nav-item">
+            </Link>
+            <Link to="/#expertise" className="nav-item">
               <ExpertiseIcon fillColorPrimary="var(--dark-500)" fillColorSecondary='var(--dark-950)'></ExpertiseIcon>
               <span>Our expertise</span>
-            </a>
-            <a href="/#contact" className="nav-item">
+            </Link>
+            <Link to="/#contact" className="nav-item">
               <ContactIcon fillColor="var(--dark-500)"></ContactIcon>
               <span>Contact</span>
-            </a>
+            </Link>
           </div>
           <p className="bottom-text">Located in Singapore</p>
         </div>
